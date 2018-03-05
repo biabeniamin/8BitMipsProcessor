@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Mar 05 15:32:09 2018
+# Process ID: 11020
+# Current directory: C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1
+# Command line: vivado.exe -log counter.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source counter.tcl -notrace
+# Log file: C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1/counter.vdi
+# Journal file: C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source counter.tcl -notrace

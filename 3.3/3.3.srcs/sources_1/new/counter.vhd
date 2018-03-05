@@ -44,7 +44,7 @@ begin
         if(clk'event and clk = '1')
         then
             
-            state <= std_logic_vector(unsigned(state) + 1);
+            state <= state + 1;
         end if;
     end process;
     
@@ -59,13 +59,13 @@ begin
         end if;
     end process;
 
-    with state(15 downto 0) select
+    with state(15 downto 14) select
         an <= "1110" when "00",
             "1101" when "01",
             "1011" when "10",
             "0111" when "11";
             
-     with state(15 downto 0) select
+     with state(15 downto 14) select
         cat <= digit0 when "00",
              digit1 when "01",
              digit2 when "10",

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1520256695">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1520257792">
   <File Type="PWROPT-DRC" Name="counter_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="counter_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="counter_timing_summary_init.rpt"/>

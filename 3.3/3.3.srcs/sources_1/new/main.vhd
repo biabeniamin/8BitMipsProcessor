@@ -1,22 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 03/05/2018 02:01:22 PM
--- Design Name: 
--- Module Name: main - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
 
 
 library IEEE;
@@ -31,52 +12,36 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity MPG is
-port( btn : in STD_LOGIC;
-    clock : in STD_LOGIC;
-    debouncedClock : out STD_LOGIC
-    );
+entity main is
+port(   clk :in std_logic;
+        btn : in std_logic_vector(4 downto 0);
+        sw : in std_logic_vector(15 downto 0);
+        led : out std_logic_vector(15 downto 0);
+        an : out std_logic_vector(3 downto 0);
+        cat : out std_logic_vector(6 downto 0));
 
-end MPG; 
+end main; 
  
-architecture Behavioral of MPG is 
+architecture Behavioral of main is 
+
+signal mpgDebouncedButton : std_logic; 
  
-signal count_int : std_logic_vector(31 downto 0) :=x"00000000";
-signal Q1 : std_logic;
-signal Q2 : std_logic;
-signal Q3 : std_logic;                        
-signal en : std_logic;
-
-
 Begin 
- en <= Q2 AND (not Q3); 
- debouncedClock <= en;
- process (clock)
-  begin
-      if clock='1' and clock'event 
-      then
-                count_int <= std_logic_vector(unsigned(count_int) + 1);
-                    end if;
-     end process; 
-     
- process (clock) 
- begin    if clock'event and clock='1' 
- then
-         if count_int(15 downto 0) = "1111111111111111"
-          then
-                     Q1 <= btn;
-                            end if;
-                                 end if;
-end process; 
-
- process (clock)
-  begin    
-  if clock'event and clock='1' 
-  then
-           Q2 <= Q1;
-                  Q3 <= Q2;
-                      end if;
-     end process; 
+ 
+        mpgInstance : entity work.MPG
+            port map(btn => btn(0),
+            clock => clk,
+            debouncedClock => mpgDebouncedButton);
+            
+        counter : entity work.counter
+            port map(clk => clk,
+            btn => mpgDebouncedButton,
+            sw => sw,
+            led => led,
+            an => an,
+            cat => cat
+            );
+            
      
      
  end Behavioral; 

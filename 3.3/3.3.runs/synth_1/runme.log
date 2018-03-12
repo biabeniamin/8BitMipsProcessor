@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log counter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter.tcl
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 
 
 ****** Vivado v2016.4 (64-bit)
@@ -8,61 +8,62 @@
   **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
-source counter.tcl -notrace
-Command: synth_design -top counter -part xc7a35tcpg236-1
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7748 
+INFO: Helper process launched with PID 6020 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 276.137 ; gain = 66.250
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 276.445 ; gain = 66.523
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/counter.vhd:30]
-INFO: [Synth 8-638] synthesizing module 'MPG' [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'MPG' (1#1) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:42]
-INFO: [Synth 8-638] synthesizing module 'segmentDecoder' [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/7segmentDecoder.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'segmentDecoder' (2#1) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/7segmentDecoder.vhd:14]
-WARNING: [Synth 8-3848] Net led in module/entity counter does not have driver. [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/counter.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'counter' (3#1) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/counter.vhd:30]
-WARNING: [Synth 8-3331] design counter has unconnected port led[15]
-WARNING: [Synth 8-3331] design counter has unconnected port led[14]
-WARNING: [Synth 8-3331] design counter has unconnected port led[13]
-WARNING: [Synth 8-3331] design counter has unconnected port led[12]
-WARNING: [Synth 8-3331] design counter has unconnected port led[11]
-WARNING: [Synth 8-3331] design counter has unconnected port led[10]
-WARNING: [Synth 8-3331] design counter has unconnected port led[9]
-WARNING: [Synth 8-3331] design counter has unconnected port led[8]
-WARNING: [Synth 8-3331] design counter has unconnected port led[7]
-WARNING: [Synth 8-3331] design counter has unconnected port led[6]
-WARNING: [Synth 8-3331] design counter has unconnected port led[5]
-WARNING: [Synth 8-3331] design counter has unconnected port led[4]
-WARNING: [Synth 8-3331] design counter has unconnected port led[3]
-WARNING: [Synth 8-3331] design counter has unconnected port led[2]
-WARNING: [Synth 8-3331] design counter has unconnected port led[1]
-WARNING: [Synth 8-3331] design counter has unconnected port led[0]
-WARNING: [Synth 8-3331] design counter has unconnected port btn[4]
-WARNING: [Synth 8-3331] design counter has unconnected port btn[3]
-WARNING: [Synth 8-3331] design counter has unconnected port btn[2]
-WARNING: [Synth 8-3331] design counter has unconnected port btn[1]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[15]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[14]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[13]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[12]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[11]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[10]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[9]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[8]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[7]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[6]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[5]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[4]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[3]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[2]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[1]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[0]
+INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:26]
+WARNING: [Synth 8-614] signal 'btn' is read in the process but is not in the sensitivity list [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'Registers' [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/Registers.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'Registers' (1#1) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/Registers.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'MPG' [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/mpg.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'MPG' (2#1) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/mpg.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'segmentDecoder' [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/7segmentDecoder.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'segmentDecoder' (3#1) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/7segmentDecoder.vhd:18]
+WARNING: [Synth 8-3848] Net led in module/entity main does not have driver. [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'main' (4#1) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:26]
+WARNING: [Synth 8-3331] design main has unconnected port led[15]
+WARNING: [Synth 8-3331] design main has unconnected port led[14]
+WARNING: [Synth 8-3331] design main has unconnected port led[13]
+WARNING: [Synth 8-3331] design main has unconnected port led[12]
+WARNING: [Synth 8-3331] design main has unconnected port led[11]
+WARNING: [Synth 8-3331] design main has unconnected port led[10]
+WARNING: [Synth 8-3331] design main has unconnected port led[9]
+WARNING: [Synth 8-3331] design main has unconnected port led[8]
+WARNING: [Synth 8-3331] design main has unconnected port led[7]
+WARNING: [Synth 8-3331] design main has unconnected port led[6]
+WARNING: [Synth 8-3331] design main has unconnected port led[5]
+WARNING: [Synth 8-3331] design main has unconnected port led[4]
+WARNING: [Synth 8-3331] design main has unconnected port led[3]
+WARNING: [Synth 8-3331] design main has unconnected port led[2]
+WARNING: [Synth 8-3331] design main has unconnected port led[1]
+WARNING: [Synth 8-3331] design main has unconnected port led[0]
+WARNING: [Synth 8-3331] design main has unconnected port btn[4]
+WARNING: [Synth 8-3331] design main has unconnected port btn[3]
+WARNING: [Synth 8-3331] design main has unconnected port sw[15]
+WARNING: [Synth 8-3331] design main has unconnected port sw[14]
+WARNING: [Synth 8-3331] design main has unconnected port sw[13]
+WARNING: [Synth 8-3331] design main has unconnected port sw[12]
+WARNING: [Synth 8-3331] design main has unconnected port sw[11]
+WARNING: [Synth 8-3331] design main has unconnected port sw[10]
+WARNING: [Synth 8-3331] design main has unconnected port sw[9]
+WARNING: [Synth 8-3331] design main has unconnected port sw[8]
+WARNING: [Synth 8-3331] design main has unconnected port sw[7]
+WARNING: [Synth 8-3331] design main has unconnected port sw[6]
+WARNING: [Synth 8-3331] design main has unconnected port sw[5]
+WARNING: [Synth 8-3331] design main has unconnected port sw[4]
+WARNING: [Synth 8-3331] design main has unconnected port sw[3]
+WARNING: [Synth 8-3331] design main has unconnected port sw[2]
+WARNING: [Synth 8-3331] design main has unconnected port sw[1]
+WARNING: [Synth 8-3331] design main has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 313.488 ; gain = 103.602
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 313.773 ; gain = 103.852
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -72,7 +73,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 313.488 ; gain = 103.602
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 313.773 ; gain = 103.852
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -81,32 +82,32 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/constrs_1/imports/Desktop/basys3.xdc]
 Finished Parsing XDC File [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/constrs_1/imports/Desktop/basys3.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/constrs_1/imports/Desktop/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/counter_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/counter_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/constrs_1/imports/Desktop/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 597.801 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 605.219 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -118,11 +119,14 @@ Report RTL Partitions:
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	                1 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
 +---Muxes : 
-	   4 Input      7 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -130,15 +134,21 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module counter 
+Module main 
 Detailed RTL Component Info : 
-+---Muxes : 
-	   4 Input      7 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
 Module MPG 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 3     
+Module segmentDecoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -154,60 +164,90 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3331] design counter has unconnected port led[15]
-WARNING: [Synth 8-3331] design counter has unconnected port led[14]
-WARNING: [Synth 8-3331] design counter has unconnected port led[13]
-WARNING: [Synth 8-3331] design counter has unconnected port led[12]
-WARNING: [Synth 8-3331] design counter has unconnected port led[11]
-WARNING: [Synth 8-3331] design counter has unconnected port led[10]
-WARNING: [Synth 8-3331] design counter has unconnected port led[9]
-WARNING: [Synth 8-3331] design counter has unconnected port led[8]
-WARNING: [Synth 8-3331] design counter has unconnected port led[7]
-WARNING: [Synth 8-3331] design counter has unconnected port led[6]
-WARNING: [Synth 8-3331] design counter has unconnected port led[5]
-WARNING: [Synth 8-3331] design counter has unconnected port led[4]
-WARNING: [Synth 8-3331] design counter has unconnected port led[3]
-WARNING: [Synth 8-3331] design counter has unconnected port led[2]
-WARNING: [Synth 8-3331] design counter has unconnected port led[1]
-WARNING: [Synth 8-3331] design counter has unconnected port led[0]
-WARNING: [Synth 8-3331] design counter has unconnected port btn[4]
-WARNING: [Synth 8-3331] design counter has unconnected port btn[3]
-WARNING: [Synth 8-3331] design counter has unconnected port btn[2]
-WARNING: [Synth 8-3331] design counter has unconnected port btn[1]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[15]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[14]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[13]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[12]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[11]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[10]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[9]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[8]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[7]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[6]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[5]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[4]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[3]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[2]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[1]
-WARNING: [Synth 8-3331] design counter has unconnected port sw[0]
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[16]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[17]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[18]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[19]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[20]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[21]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[22]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[23]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[24]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[25]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[26]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[27]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[28]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[29]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[30]) is unused and will be removed from module counter.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[31]) is unused and will be removed from module counter.
+WARNING: [Synth 8-4767] Trying to implement RAM 'reg/reg_file_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: Found multiple reads with same address from RAM. 
+	2: No valid read/write found for RAM. 
+RAM "reg/reg_file_reg" dissolved into registers
+WARNING: [Synth 8-3331] design main has unconnected port led[15]
+WARNING: [Synth 8-3331] design main has unconnected port led[14]
+WARNING: [Synth 8-3331] design main has unconnected port led[13]
+WARNING: [Synth 8-3331] design main has unconnected port led[12]
+WARNING: [Synth 8-3331] design main has unconnected port led[11]
+WARNING: [Synth 8-3331] design main has unconnected port led[10]
+WARNING: [Synth 8-3331] design main has unconnected port led[9]
+WARNING: [Synth 8-3331] design main has unconnected port led[8]
+WARNING: [Synth 8-3331] design main has unconnected port led[7]
+WARNING: [Synth 8-3331] design main has unconnected port led[6]
+WARNING: [Synth 8-3331] design main has unconnected port led[5]
+WARNING: [Synth 8-3331] design main has unconnected port led[4]
+WARNING: [Synth 8-3331] design main has unconnected port led[3]
+WARNING: [Synth 8-3331] design main has unconnected port led[2]
+WARNING: [Synth 8-3331] design main has unconnected port led[1]
+WARNING: [Synth 8-3331] design main has unconnected port led[0]
+WARNING: [Synth 8-3331] design main has unconnected port btn[4]
+WARNING: [Synth 8-3331] design main has unconnected port btn[3]
+WARNING: [Synth 8-3331] design main has unconnected port sw[15]
+WARNING: [Synth 8-3331] design main has unconnected port sw[14]
+WARNING: [Synth 8-3331] design main has unconnected port sw[13]
+WARNING: [Synth 8-3331] design main has unconnected port sw[12]
+WARNING: [Synth 8-3331] design main has unconnected port sw[11]
+WARNING: [Synth 8-3331] design main has unconnected port sw[10]
+WARNING: [Synth 8-3331] design main has unconnected port sw[9]
+WARNING: [Synth 8-3331] design main has unconnected port sw[8]
+WARNING: [Synth 8-3331] design main has unconnected port sw[7]
+WARNING: [Synth 8-3331] design main has unconnected port sw[6]
+WARNING: [Synth 8-3331] design main has unconnected port sw[5]
+WARNING: [Synth 8-3331] design main has unconnected port sw[4]
+WARNING: [Synth 8-3331] design main has unconnected port sw[3]
+WARNING: [Synth 8-3331] design main has unconnected port sw[2]
+WARNING: [Synth 8-3331] design main has unconnected port sw[1]
+WARNING: [Synth 8-3331] design main has unconnected port sw[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg/reg_file_reg[7][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg/reg_file_reg[6][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg/reg_file_reg[5][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg/reg_file_reg[4][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg/reg_file_reg[3][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg/reg_file_reg[2][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg/reg_file_reg[0][0] )
+WARNING: [Synth 8-3332] Sequential element (address_reg[7]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (address_reg[6]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (address_reg[5]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (address_reg[4]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (address_reg[3]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[7][15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[7][0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[6][15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[6][0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[5][15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[5][0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[4][15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[4][0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[3][15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[3][0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[2][15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[2][0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[1][15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[0][15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (reg/reg_file_reg[0][0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[16]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[17]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[18]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[19]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[20]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[21]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[22]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[23]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[24]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[25]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[26]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[27]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[28]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[29]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[30]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[31]) is unused and will be removed from module main.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -222,10 +262,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -237,7 +277,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -261,7 +301,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -274,7 +314,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,25 +326,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -321,34 +361,39 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    12|
-|3     |LUT1   |    48|
-|4     |LUT2   |     5|
-|5     |LUT4   |    21|
-|6     |LUT6   |    16|
-|7     |MUXF7  |     6|
-|8     |MUXF8  |     3|
-|9     |FDRE   |    51|
-|10    |IBUF   |     2|
-|11    |OBUF   |    11|
-|12    |OBUFT  |    16|
+|2     |CARRY4 |     8|
+|3     |LUT1   |    33|
+|4     |LUT2   |     6|
+|5     |LUT3   |     1|
+|6     |LUT4   |    10|
+|7     |LUT5   |    10|
+|8     |LUT6   |    32|
+|9     |MUXF7  |    14|
+|10    |FDCE   |     3|
+|11    |FDRE   |   151|
+|12    |IBUF   |     4|
+|13    |OBUF   |    11|
+|14    |OBUFT  |    16|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+--------------+-------+------+
-|      |Instance      |Module |Cells |
-+------+--------------+-------+------+
-|1     |top           |       |   192|
-|2     |  mpgInstance |MPG    |    45|
-+------+--------------+-------+------+
++------+-----------------+---------------+------+
+|      |Instance         |Module         |Cells |
++------+-----------------+---------------+------+
+|1     |top              |               |   300|
+|2     |  mpgInstance    |MPG            |    44|
+|3     |  mpgInstance2   |MPG_0          |    11|
+|4     |  \reg           |Registers      |   167|
+|5     |  segmentDecoder |segmentDecoder |    40|
++------+-----------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.219 ; gain = 395.297
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 52 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 597.801 ; gain = 103.602
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 597.801 ; gain = 387.914
+Synthesis finished with 0 errors, 0 critical warnings and 71 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 605.219 ; gain = 103.852
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.219 ; gain = 395.297
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -356,9 +401,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-21 Infos, 89 Warnings, 0 Critical Warnings and 0 Errors encountered.
+31 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 597.801 ; gain = 387.914
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/synth_1/counter.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 597.801 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 05 15:50:18 2018...
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 605.219 ; gain = 395.297
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/synth_1/main.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 605.219 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 12 14:44:26 2018...

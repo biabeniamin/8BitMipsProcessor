@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1520257792">
-  <File Type="RDS-PROPCONSTRS" Name="counter_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="counter.tcl"/>
-  <File Type="RDS-RDS" Name="counter.vds"/>
-  <File Type="RDS-UTIL" Name="counter_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="counter_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="counter.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="counter_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="counter_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1520858639">
+  <File Type="RDS-PROPCONSTRS" Name="main_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="main.tcl"/>
+  <File Type="RDS-RDS" Name="main.vds"/>
+  <File Type="RDS-UTIL" Name="main_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="main_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="main.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="main_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="main_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Registers.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/7segmentDecoder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mpg.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -24,13 +36,21 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/counter.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/alu.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="counter"/>
+      <Option Name="TopModule" Val="main"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -49,9 +69,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

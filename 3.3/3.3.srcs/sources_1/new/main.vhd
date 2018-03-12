@@ -3,6 +3,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
@@ -24,9 +25,37 @@ end main;
  
 architecture Behavioral of main is 
 
-signal mpgDebouncedButton : std_logic; 
+type ramType is array(0 to 7) of std_logic_vector(15 downto 0);
+
+signal ram : ramType :=(
+"0000000000000000",
+"0000000000000010",
+"0000000000000101",
+"0000000000001101",
+"0000000000100000",
+"0000000000100010",
+"0000000000100101",
+"0000000000101101"
+);
+signal mpgDebouncedButton : std_logic;
+signal display : std_logic_vector(15 downto 0);
+signal address : std_logic_vector(7 downto 0);
  
 Begin 
+
+    
+    process(clk)
+    begin
+        if(clk'event and clk = '1')
+        then
+            if mpgDebouncedButton = '1'
+            then
+                address <= address + 1;
+            end if;
+        end if;
+    end process;
+    
+    display <= ram(conv_integer(address));
  
         mpgInstance : entity work.MPG
             port map(btn => btn(0),
@@ -37,10 +66,14 @@ Begin
             port map(clk => clk,
             btn => mpgDebouncedButton,
             sw => sw,
-            led => led,
-            an => an,
-            cat => cat
+            output => display
             );
+            
+         segmentDecoder : entity work.segmentDecoder
+            port map(value => display,
+            clk => clk,
+            an => an,
+            cat => cat);
             
      
      

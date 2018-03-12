@@ -14,9 +14,7 @@ entity counter is
     Port ( clk :in std_logic;
         btn : in std_logic;
         sw : in std_logic_vector(15 downto 0);
-        led : out std_logic_vector(15 downto 0);
-        an : out std_logic_vector(3 downto 0);
-        cat : out std_logic_vector(6 downto 0)
+        output : out std_logic_vector(15 downto 0)
      );
         
 end counter;
@@ -28,7 +26,7 @@ signal display : std_logic_vector(15 downto 0);
 
 begin
 
-   
+   output <= display;
     
     process(clk)
     begin
@@ -41,11 +39,7 @@ begin
         end if;
     end process;
         
-    segmentDecoder : entity work.segmentDecoder
-                port map(value => display,
-                    clk => clk,
-                    an => an,
-                    cat => cat);
+
                     
 
 

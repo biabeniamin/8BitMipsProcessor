@@ -7,19 +7,16 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 
-entity Registers is
+entity Memory is
     Port ( clk : in STD_LOGIC;
-        ra1 : in STD_LOGIC_vector(2 downto 0);
-        ra2 : in STD_LOGIC_vector(2 downto 0);
-        wa : in STD_LOGIC_vector(2 downto 0);
+        ra : in STD_LOGIC_vector(2 downto 0);
         wd : in STD_LOGIC_vector(15 downto 0);
         wen : in STD_LOGIC;
-        rd1 : out STD_LOGIC_vector(15 downto 0);
-        rd2 : out STD_LOGIC_vector(15 downto 0)
+        rd : out STD_LOGIC_vector(15 downto 0)
     );
-end Registers;
+end Memory;
 
-architecture Behavioral of Registers is
+architecture Behavioral of Memory is
 
 type reg_array is array(0 to 7) of std_logic_vector(15 downto 0);
 signal reg_file : reg_array :=(
@@ -41,13 +38,15 @@ begin
         then
             if(wen = '1')
             then
-                reg_file(conv_integer(wa)) <= wd;
+                reg_file(conv_integer(ra)) <= wd;
+                rd <= wd;
+            else
+                rd <= reg_file(conv_integer(ra));
             end if;
         end if;
     end process;
     
-    rd1 <= reg_file(conv_integer(ra1));
-    rd2 <= reg_file(conv_integer(ra2));
+
 
 end Behavioral;
 

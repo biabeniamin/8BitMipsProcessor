@@ -64,21 +64,30 @@ Begin
     end process;
     
     --display <= ram(conv_integer(address));
-    display <= wd;
+    display <= rd1;
     
-    wd <= rd1 + rd2;
+    wd <= rd1(13 downto 0) & "00";
     
     
-    reg : entity work.Registers
-    port map ( clk =>clk,
-            ra1 => address(2 downto 0),
-            ra2 => address(2 downto 0),
-            wa => address(2 downto 0),
-            rd1 => rd1,
-            rd2 => rd2,
-            wd => wd,
-            wen => wen
-        );
+    --reg : entity work.Registers
+    --port map ( clk =>clk,
+    --        ra1 => address(2 downto 0),
+    --        ra2 => address(2 downto 0),
+    --        wa => address(2 downto 0),
+    --       rd1 => rd1,
+    --        rd2 => rd2,
+    --        wd => wd,
+    --        wen => wen
+    --    );
+      
+        
+    reg : entity work.Memory
+            port map ( clk =>clk,
+                    ra => address(2 downto 0),
+                    rd => rd1,
+                    wd => wd,
+                    wen => wen
+                );
  
         mpgInstance : entity work.MPG
             port map(btn => btn(0),

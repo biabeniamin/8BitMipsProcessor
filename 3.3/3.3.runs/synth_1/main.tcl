@@ -17,7 +17,7 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/Student/Desktop/30122/Bia/3.3/3.3.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/Registers.vhd
+  C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/Memory.vhd
   C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/7segmentDecoder.vhd
   C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/mpg.vhd
   C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd

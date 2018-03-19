@@ -25,18 +25,32 @@ end main;
  
 architecture Behavioral of main is 
 
---type ramType is array(0 to 7) of std_logic_vector(15 downto 0);
+type ramType is array(0 to 7) of std_logic_vector(15 downto 0);
 
---signal ram : ramType :=(
---"0000000000000000",
---"0000000000000010",
---"0000000000000101",
---"0000000000001101",
---"0000000000100000",
---"0000000000100010",
---"0000000000100101",
---"1000000000101101"
---);
+--shift left log function=000
+--add function=001
+--substraction function=010
+--shift right log function=011
+--and function=100
+--or function=101
+--xor function=110
+--not function=111
+
+--opcode_source_second source_desti_shift amount_fucntion
+
+--mov $1, $0
+--addi $1, 5
+
+signal ram : ramType :=(
+B"000_000_000_001_0_000",
+B"000_000_000_001_0_000",
+"0000000000000101",
+"0000000000001101",
+"0000000000100000",
+"0000000000100010",
+"0000000000100101",
+"1000000000101101"
+);
 signal mpgDebouncedButton : std_logic;
 signal display : std_logic_vector(15 downto 0);
 signal address : std_logic_vector(7 downto 0);

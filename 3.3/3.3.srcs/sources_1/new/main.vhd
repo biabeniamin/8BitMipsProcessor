@@ -37,6 +37,10 @@ signal rd1 : std_logic_vector(15 downto 0);
 signal wd : std_logic_vector(15 downto 0);
 signal rd2 : std_logic_vector(15 downto 0);
 signal reset : std_logic;
+
+attribute mark_debug : string;
+attribute mark_debug of display : signal is "true";
+attribute mark_debug of mpgDebouncedButton : signal is "true"; 
  
 Begin 
 

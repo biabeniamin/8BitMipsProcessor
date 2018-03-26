@@ -52,14 +52,16 @@ B"111_0000000000000",--E000
 signal pc : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal nextInstr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal branchAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal nextAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 attribute mark_debug : string;
 attribute mark_debug of pc : signal is "true"; 
 
 begin
+    nextAddr <= pc + 1;
 
     with pCSrcControl select
-        branchAddr <= pc + 1 when '0',
+        branchAddr <= nextAddr when '0',
             branchAddress when others;
 
     with jumpControl Select
@@ -67,7 +69,7 @@ begin
             jumpAddress when others;
             
     currentInstruction <= rom(conv_integer(pc));
-    nextInstruction <= pc +1;  
+    nextInstruction <= nextAddr;  
 
     process(clk)
     begin

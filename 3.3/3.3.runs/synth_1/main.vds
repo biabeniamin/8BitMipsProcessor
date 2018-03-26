@@ -2,8 +2,8 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Mon Mar 26 14:56:41 2018
-# Process ID: 9484
+# Start of session at: Mon Mar 26 15:16:43 2018
+# Process ID: 1096
 # Current directory: C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/synth_1
 # Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/synth_1/main.vds
@@ -15,15 +15,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9572 
+INFO: Helper process launched with PID 5360 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 276.633 ; gain = 66.320
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 276.938 ; gain = 66.535
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:26]
-WARNING: [Synth 8-614] signal 'btn' is read in the process but is not in the sensitivity list [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:44]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:29]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:30]
+WARNING: [Synth 8-614] signal 'btn' is read in the process but is not in the sensitivity list [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd:48]
 INFO: [Synth 8-638] synthesizing module 'InstructFetch' [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/InstructFetch.vhd:23]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/InstructFetch.vhd:52]
-WARNING: [Synth 8-614] signal 'clear' is read in the process but is not in the sensitivity list [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/InstructFetch.vhd:72]
+WARNING: [Synth 8-614] signal 'clear' is read in the process but is not in the sensitivity list [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/InstructFetch.vhd:74]
 INFO: [Synth 8-256] done synthesizing module 'InstructFetch' (1#1) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/InstructFetch.vhd:23]
 INFO: [Synth 8-638] synthesizing module 'MPG' [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/mpg.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'MPG' (2#1) [C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/mpg.vhd:23]
@@ -64,7 +66,7 @@ WARNING: [Synth 8-3331] design main has unconnected port sw[4]
 WARNING: [Synth 8-3331] design main has unconnected port sw[3]
 WARNING: [Synth 8-3331] design main has unconnected port sw[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 313.965 ; gain = 103.652
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 314.270 ; gain = 103.867
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -74,7 +76,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 313.965 ; gain = 103.652
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 314.270 ; gain = 103.867
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -90,26 +92,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 604.645 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 605.656 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "rom" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -205,24 +207,40 @@ WARNING: [Synth 8-3331] design main has unconnected port sw[5]
 WARNING: [Synth 8-3331] design main has unconnected port sw[4]
 WARNING: [Synth 8-3331] design main has unconnected port sw[3]
 WARNING: [Synth 8-3331] design main has unconnected port sw[2]
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[16]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[17]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[18]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[19]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[20]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[21]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[22]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[23]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[24]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[25]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[26]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[27]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[28]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[29]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[30]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (mpgInstance/count_int_reg[31]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[16]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[17]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[18]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[19]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[20]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[21]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[22]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[23]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[24]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[25]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[26]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[27]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[28]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[29]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[30]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mpgInstance2/count_int_reg[31]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[16]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[17]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[18]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[19]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[20]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[21]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[22]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[23]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[24]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[25]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[26]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[27]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[28]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[29]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[30]) is unused and will be removed from module MPG.
+WARNING: [Synth 8-3332] Sequential element (count_int_reg[31]) is unused and will be removed from module MPG.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -237,10 +255,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -252,7 +270,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -276,7 +294,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -289,7 +307,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -301,25 +319,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -336,39 +354,38 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    12|
-|3     |LUT1   |    47|
-|4     |LUT2   |     7|
-|5     |LUT3   |    16|
-|6     |LUT4   |    16|
-|7     |LUT5   |     4|
-|8     |LUT6   |     6|
-|9     |MUXF7  |     4|
-|10    |FDCE   |    16|
-|11    |FDRE   |    38|
-|12    |IBUF   |     6|
-|13    |OBUF   |    11|
-|14    |OBUFT  |    16|
+|2     |CARRY4 |    16|
+|3     |LUT1   |    65|
+|4     |LUT2   |     6|
+|5     |LUT3   |    25|
+|6     |LUT4   |     7|
+|7     |LUT5   |    16|
+|8     |LUT6   |    10|
+|9     |FDCE   |    16|
+|10    |FDRE   |    54|
+|11    |IBUF   |     6|
+|12    |OBUF   |    11|
+|13    |OBUFT  |    16|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-----------------+---------------+------+
 |      |Instance         |Module         |Cells |
 +------+-----------------+---------------+------+
-|1     |top              |               |   200|
-|2     |  insfet         |InstructFetch  |    78|
-|3     |  mpgInstance    |MPG            |    44|
-|4     |  mpgInstance2   |MPG_0          |     4|
-|5     |  segmentDecoder |segmentDecoder |    40|
+|1     |top              |               |   249|
+|2     |  insfet         |InstructFetch  |    62|
+|3     |  mpgInstance    |MPG            |    43|
+|4     |  segmentDecoder |segmentDecoder |    51|
+|5     |  mpgInstance2   |MPG__2         |    43|
 +------+-----------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 604.645 ; gain = 394.332
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 605.656 ; gain = 395.254
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 604.645 ; gain = 103.652
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 604.645 ; gain = 394.332
+Synthesis finished with 0 errors, 0 critical warnings and 64 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 605.656 ; gain = 103.867
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 605.656 ; gain = 395.254
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -376,9 +393,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-26 Infos, 83 Warnings, 0 Critical Warnings and 0 Errors encountered.
+28 Infos, 99 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 604.645 ; gain = 394.332
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 605.656 ; gain = 395.254
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/synth_1/main.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 604.645 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 26 14:57:06 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 605.656 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 26 15:17:10 2018...

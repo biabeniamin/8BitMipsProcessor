@@ -25,40 +25,18 @@ end main;
  
 architecture Behavioral of main is 
 
-type ramType is array(0 to 7) of std_logic_vector(15 downto 0);
 
---shift left log function=000
---add function=001
---substraction function=010
---shift right log function=011
---and function=100
---or function=101
---xor function=110
---not function=111
-
---opcode_source_second source_desti_shift amount_fucntion
-
---mov $1, $0
---addi $1, 5
-
-signal ram : ramType :=(
-B"000_000_000_001_0_000",
-B"000_000_000_001_0_000",
-"0000000000000101",
-"0000000000001101",
-"0000000000100000",
-"0000000000100010",
-"0000000000100101",
-"1000000000101101"
-);
 signal mpgDebouncedButton : std_logic;
 signal display : std_logic_vector(15 downto 0);
 signal address : std_logic_vector(7 downto 0);
 
+signal currentInstruction : std_logic_vector(15 downto 0);
+signal nextInstruction : std_logic_vector(15 downto 0);
+
 signal rd1 : std_logic_vector(15 downto 0);
 signal wd : std_logic_vector(15 downto 0);
 signal rd2 : std_logic_vector(15 downto 0);
-signal wen : std_logic;
+signal reset : std_logic;
  
 Begin 
 
@@ -77,8 +55,11 @@ Begin
         end if;
     end process;
     
-    --display <= ram(conv_integer(address));
-    display <= rd1;
+    
+    with sw(7) select
+        display <= currentInstruction when '1',
+            nextInstruction when '0';
+        
     
     wd <= rd1(13 downto 0) & "00";
     
@@ -93,15 +74,29 @@ Begin
     --        wd => wd,
     --        wen => wen
     --    );
+    
+    insfet : entity work.InstructFetch
+    port map ( clk =>clk,
+        clkEnable => mpgDebouncedButton,
+        branchAddress => x"0000",
+        jumpAddress => x"0003",
+        jumpControl => sw(0),
+        pCSrcControl => sw(1),
+        clear => reset,
+        currentInstruction => currentInstruction,
+        nextInstruction => nextInstruction
+        );
+        
+
       
         
-    reg : entity work.Memory
-            port map ( clk =>clk,
-                    ra => address(2 downto 0),
-                    rd => rd1,
-                    wd => wd,
-                    wen => wen
-                );
+    --reg : entity work.Memory
+      --      port map ( clk =>clk,
+    --                ra => address(2 downto 0),
+  --                  rd => rd1,
+--                    wd => wd,
+--                    wen => wen
+--                );
  
         mpgInstance : entity work.MPG
             port map(btn => btn(0),
@@ -111,7 +106,7 @@ Begin
         mpgInstance2 : entity work.MPG
                         port map(btn => btn(1),
                         clock => clk,
-                        debouncedClock => wen);
+                        debouncedClock => reset);
                             
          --   port map(clk => clk,
          --   btn => mpgDebouncedButton,

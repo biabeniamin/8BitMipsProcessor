@@ -55,7 +55,9 @@ signal branchAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal nextAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 attribute mark_debug : string;
-attribute mark_debug of pc : signal is "true"; 
+attribute mark_debug of pc : signal is "true";
+attribute mark_debug of pCSrcControl : signal is "true";
+attribute mark_debug of jumpControl : signal is "true"; 
 
 begin
     nextAddr <= pc + 1;

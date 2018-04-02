@@ -15,9 +15,9 @@
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="148"></ValueColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="2" />
+   <WVObjectSize size="4" />
    <wave_markers>
    </wave_markers>
    <wvobject fp_name="insfet/pc" type="array">
@@ -32,6 +32,18 @@
       <obj_property name="ElementShortName">display[15:0]</obj_property>
       <obj_property name="ObjectShortName">display[15:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="insfet/jumpControl" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">insfet/jumpControl</obj_property>
+      <obj_property name="ObjectShortName">jumpControl</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="insfet/pCSrcControl" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">insfet/pCSrcControl</obj_property>
+      <obj_property name="ObjectShortName">pCSrcControl</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>

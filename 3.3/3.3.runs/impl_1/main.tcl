@@ -49,13 +49,15 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1/main.dcp
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/Student/Desktop/30122/Bia/3.3/3.3.cache/wt [current_project]
   set_property parent.project_path C:/Users/Student/Desktop/30122/Bia/3.3/3.3.xpr [current_project]
   set_property ip_output_repo C:/Users/Student/Desktop/30122/Bia/3.3/3.3.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/synth_1/main.dcp
+  read_xdc C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/constrs_1/imports/Desktop/basys3.xdc
+  link_design -top main -part xc7a35tcpg236-1
   write_hwdef -file main.hwdef
   close_msg_db -file init_design.pb
 } RESULT]

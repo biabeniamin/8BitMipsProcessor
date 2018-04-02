@@ -132,10 +132,12 @@ set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
 set_property port_width 1 [get_debug_ports u_ila_0/clk]
 connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG]]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-set_property port_width 33 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {insfet/pc[0]} {insfet/pc[1]} {insfet/pc[2]} {insfet/pc[3]} {insfet/pc[4]} {insfet/pc[5]} {insfet/pc[6]} {insfet/pc[7]} {insfet/pc[8]} {insfet/pc[9]} {insfet/pc[10]} {insfet/pc[11]} {insfet/pc[12]} {insfet/pc[13]} {insfet/pc[14]} {insfet/pc[15]} {display[0]} {display[1]} {display[2]} {display[3]} {display[4]} {display[5]} {display[6]} {display[7]} {display[8]} {display[9]} {display[10]} {display[11]} {display[12]} {display[13]} {display[14]} {display[15]} mpgDebouncedButton]]
+set_property port_width 35 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {insfet/pc[0]} {insfet/pc[1]} {insfet/pc[2]} {insfet/pc[3]} {insfet/pc[4]} {insfet/pc[5]} {insfet/pc[6]} {insfet/pc[7]} {insfet/pc[8]} {insfet/pc[9]} {insfet/pc[10]} {insfet/pc[11]} {insfet/pc[12]} {insfet/pc[13]} {insfet/pc[14]} {insfet/pc[15]} {display[0]} {display[1]} {display[2]} {display[3]} {display[4]} {display[5]} {display[6]} {display[7]} {display[8]} {display[9]} {display[10]} {display[11]} {display[12]} {display[13]} {display[14]} {display[15]} mpgDebouncedButton insfet/jumpControl insfet/pCSrcControl]]
 
 
+
+set_property MARK_DEBUG true [get_nets insfet/jumpControl]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

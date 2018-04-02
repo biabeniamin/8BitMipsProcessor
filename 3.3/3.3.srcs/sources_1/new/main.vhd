@@ -33,10 +33,27 @@ signal address : std_logic_vector(7 downto 0);
 signal currentInstruction : std_logic_vector(15 downto 0);
 signal nextInstruction : std_logic_vector(15 downto 0);
 
-signal rd1 : std_logic_vector(15 downto 0);
 signal wd : std_logic_vector(15 downto 0);
-signal rd2 : std_logic_vector(15 downto 0);
 signal reset : std_logic;
+
+--signals for main control
+signal regDst : STD_LOGIC;
+signal extOp : STD_LOGIC;
+signal aluSrc : STD_LOGIC;
+signal branch : STD_LOGIC;
+signal jump : STD_LOGIC;
+signal aluOp : STD_LOGIC_VECTOR(1 DOWNTO 0);
+signal memWrite : STD_LOGIC;
+signal memToReg : STD_LOGIC;
+signal regWrite : STD_LOGIC;
+
+--instruction deocde
+signal rd1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal rd2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal extImm : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal funct : STD_LOGIC_VECTOR(2 DOWNTO 0);
+signal sa : STD_LOGIC;
+
 
 attribute mark_debug : string;
 attribute mark_debug of display : signal is "true";
@@ -60,13 +77,54 @@ Begin
     end process;
     
     
-    with sw(7) select
-        display <= currentInstruction when '1',
-            nextInstruction when '0';
+    with sw(7 downto 0) select
+        display <= currentInstruction when "000",
+            nextInstruction when "001",
+            rd1 when "010",
+            rd2 when "011",
+            wd when "100";
+            
+    led(7) <= regDst;
+    led(6) <= extOp;
+    led(5) <= aluSrc;
+    led(4) <= branch;
+    led(3) <= jump;
+    led(2) <= memWrite;
+    led(1) <= memToReg;
+    led(0) <= regWrite;
+    
+    led(9 downto 7) <= aluOp;
         
     
-    wd <= rd1(13 downto 0) & "00";
+    wd <= rd1 + rd2;
     
+    uc : entity work.MainControl
+    port map(instruction => currentInstruction,
+        regDst => regDst,
+        extOp => extOp,
+        aluSrc => aluSrc,
+        branch => branch,
+        jump => jump,
+        aluOp => aluOp,
+        memWrite => memWrite,
+        memToReg => memToReg,
+        regWrite => regWrite
+     );
+    
+    ic : entity work.InstructionDecode
+    port map(clk => clk,
+        wen => mpgDebouncedButton,
+        regWrite =>regWrite,
+        instruction =>currentInstruction,
+        regDst => regDst,
+        extOp => extOp,
+        wd => wd,
+        rd1 => rd1,
+        rd2 => rd2,
+        ext_Imm => extImm,
+        funct => funct,
+        sa => sa
+        );
     
     --reg : entity work.Registers
     --port map ( clk =>clk,
@@ -82,10 +140,10 @@ Begin
     insfet : entity work.InstructFetch
     port map ( clk =>clk,
         clkEnable => mpgDebouncedButton,
-        branchAddress => x"0000",
-        jumpAddress => x"0003",
-        jumpControl => sw(0),
-        pCSrcControl => sw(1),
+        branchAddress => x"0003",
+        jumpAddress => x"0000",
+        jumpControl => jump,
+        pCSrcControl => branch,
         clear => reset,
         currentInstruction => currentInstruction,
         nextInstruction => nextInstruction

@@ -77,12 +77,12 @@ Begin
     end process;
     
     
-    with sw(7 downto 0) select
+    with sw(7 downto 5) select
         display <= currentInstruction when "000",
             nextInstruction when "001",
             rd1 when "010",
             rd2 when "011",
-            wd when "100";
+            wd when others;
             
     led(7) <= regDst;
     led(6) <= extOp;
@@ -93,7 +93,7 @@ Begin
     led(1) <= memToReg;
     led(0) <= regWrite;
     
-    led(9 downto 7) <= aluOp;
+    led(9 downto 8) <= aluOp;
         
     
     wd <= rd1 + rd2;

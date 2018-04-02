@@ -43,7 +43,7 @@ begin
             aluSrc <= '1';
             regWrite <= '1';
                         
-        elsif(instruction(15 downto 13) = "010")--lw 
+        elsif(instruction(15 downto 13) = "010")--sw 
         then
             aluSrc <= '1';
             memWrite <= '1';

@@ -57,7 +57,7 @@ begin
             wen => wen
         );
         
-    funct <= instruction(6 downto 0);
-    sa <= instruction(7);
+    funct <= instruction(2 downto 0);
+    sa <= instruction(3);
 
 end Behavioral;

@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri Mar  9 21:32:57 2018
-# Process ID: 2288
+# Start of session at: Sun Apr 15 16:16:26 2018
+# Process ID: 6984
 # Current directory: D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.runs/synth_1
-# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
-# Log file: D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.runs/synth_1/main.vds
+# Command line: vivado.exe -log newVersion.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source newVersion.tcl
+# Log file: D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.runs/synth_1/newVersion.vds
 # Journal file: D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source main.tcl -notrace
+source newVersion.tcl -notrace

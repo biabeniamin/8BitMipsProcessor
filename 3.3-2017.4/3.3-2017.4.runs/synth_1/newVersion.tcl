@@ -16,6 +16,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param tcl.collectionResultDisplayLimit 0
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -30,9 +32,13 @@ set_property ip_output_repo d:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.cache/ip [curr
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/7segmentDecoder.vhd
-  D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/counter.vhd
+  D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/InstructFetch.vhd
+  D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/Registers.vhd
+  D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/InstructionDecode.vhd
+  D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/MainControl.vhd
   D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/mpg.vhd
   D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/main.vhd
+  D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.srcs/sources_1/new/newVersion.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -42,11 +48,14 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.srcs/constrs_1/imports/Desktop/Zybo-Z7-Master.xdc
+set_property used_in_implementation false [get_files D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.srcs/constrs_1/imports/Desktop/Zybo-Z7-Master.xdc]
 
-synth_design -top main -part xc7z020clg400-1
+
+synth_design -top newVersion -part xc7z020clg400-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef main.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb"
+write_checkpoint -force -noxdef newVersion.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file newVersion_utilization_synth.rpt -pb newVersion_utilization_synth.pb"

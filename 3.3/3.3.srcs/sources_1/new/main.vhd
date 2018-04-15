@@ -25,13 +25,20 @@ end main;
  
 architecture Behavioral of main is 
 
+attribute mark_debug : string;
 
 signal mpgDebouncedButton : std_logic;
 signal display : std_logic_vector(15 downto 0);
 signal address : std_logic_vector(7 downto 0);
 
+attribute mark_debug of display : signal is "true";
+attribute mark_debug of mpgDebouncedButton : signal is "true";
+
+--instruction fetch
 signal currentInstruction : std_logic_vector(15 downto 0);
 signal nextInstruction : std_logic_vector(15 downto 0);
+attribute mark_debug of currentInstruction : signal is "true";
+attribute mark_debug of nextInstruction : signal is "true";
 
 signal wd : std_logic_vector(15 downto 0);
 signal reset : std_logic;
@@ -53,11 +60,12 @@ signal rd2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal extImm : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal funct : STD_LOGIC_VECTOR(2 DOWNTO 0);
 signal sa : STD_LOGIC;
-
-
-attribute mark_debug : string;
-attribute mark_debug of display : signal is "true";
-attribute mark_debug of mpgDebouncedButton : signal is "true"; 
+attribute mark_debug of rd1 : signal is "true";
+attribute mark_debug of rd2 : signal is "true";
+attribute mark_debug of extImm : signal is "true";
+attribute mark_debug of funct : signal is "true";
+attribute mark_debug of sa : signal is "true";
+ 
  
 Begin 
 

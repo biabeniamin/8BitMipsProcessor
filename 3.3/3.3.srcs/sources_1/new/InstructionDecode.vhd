@@ -30,19 +30,26 @@ architecture Behavioral of InstructionDecode is
 
 signal writeAddress : STD_LOGIC_VECTOR(2 DOWNTO 0);
 
+
+
 begin
     
     process(instruction, extOp)
     begin
         if(instruction(6) = '0')
         then
-            ext_Imm <= b"111_111_111" & instruction(6 downto 0);
+            if(extOp = '1')
+            then
+                ext_Imm <= b"111_111_111" & instruction(6 downto 0);
+            else
+                ext_Imm <= b"000_000_000" & instruction(6 downto 0);
+            end if;
         else
             ext_Imm <= b"000_000_000" & instruction(6 downto 0);
         end if;
     end process;
     
-    with regDst select
+    with regDst select 
         writeAddress <= instruction(9 downto 7) when '0',
             instruction(6 downto 4) when others;
     
@@ -54,7 +61,7 @@ begin
            rd1 => rd1,
             rd2 => rd2,
             wd => wd,
-            wen => wen
+            wen => regWrite
         );
         
     funct <= instruction(2 downto 0);

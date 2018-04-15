@@ -33,6 +33,9 @@ signal reg_file : reg_array :=(
 "0000000001000000"
 ); 
 
+attribute mark_debug : string;
+attribute mark_debug of reg_file : signal is "true";
+
 begin
 
     process(clk)

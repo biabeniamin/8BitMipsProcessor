@@ -25,6 +25,10 @@ signal result : STD_LOGIC_VECTOR(15 downto 0);
 signal aluIn2 : STD_LOGIC_VECTOR(15 downto 0);
 signal aluControl : STD_LOGIC_VECTOR(3 downto 0);
 
+attribute mark_debug : string;
+
+attribute mark_debug of aluIn2 : signal is "true";
+
 begin
 
     process(clk)

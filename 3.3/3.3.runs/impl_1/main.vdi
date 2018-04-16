@@ -2,8 +2,8 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Mon Apr 16 15:39:21 2018
-# Process ID: 1144
+# Start of session at: Mon Apr 16 16:33:09 2018
+# Process ID: 4992
 # Current directory: C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1
 # Command line: vivado.exe -log main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source main.tcl -notrace
 # Log file: C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1/main.vdi
@@ -35,7 +35,7 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.469 . Memory (MB): peak = 455.566 ; gain = 9.090
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.469 . Memory (MB): peak = 458.352 ; gain = 11.113
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
@@ -47,78 +47,78 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/dat
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:2.0 for cell dbg_hub_CV.
 INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:2.0", from Vivado IP cache entry "0e781dfb45bc7d33".
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.
-INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:ila:6.2", from Vivado IP cache entry "c4dd4d158080fe07".
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1044.711 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 1d336cb62
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:ila:6.2", from Vivado IP cache entry "211a2231fad5d7a4".
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1052.461 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: d46fceac
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 1044.711 ; gain = 85.902
-Implement Debug Cores | Checksum: 1d3b6ae44
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:52 . Memory (MB): peak = 1052.461 ; gain = 93.266
+Implement Debug Cores | Checksum: 113b6d1bb
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 2 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 2880da5fa
+Phase 2 Retarget | Checksum: 1b21a873a
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:50 . Memory (MB): peak = 1052.352 ; gain = 93.543
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:52 . Memory (MB): peak = 1065.973 ; gain = 106.777
 
 Phase 3 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-10] Eliminated 30 cells.
-Phase 3 Constant propagation | Checksum: 19128af0a
+INFO: [Opt 31-10] Eliminated 39 cells.
+Phase 3 Constant propagation | Checksum: 15159b154
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:50 . Memory (MB): peak = 1052.352 ; gain = 93.543
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:53 . Memory (MB): peak = 1065.973 ; gain = 106.777
 
 Phase 4 Sweep
-INFO: [Opt 31-12] Eliminated 130 unconnected nets.
-INFO: [Opt 31-11] Eliminated 17 unconnected cells.
-Phase 4 Sweep | Checksum: 19cf0f3ab
+INFO: [Opt 31-12] Eliminated 151 unconnected nets.
+INFO: [Opt 31-11] Eliminated 1 unconnected cells.
+Phase 4 Sweep | Checksum: 223d7340e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:50 . Memory (MB): peak = 1052.352 ; gain = 93.543
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:53 . Memory (MB): peak = 1065.973 ; gain = 106.777
 
 Phase 5 BUFG optimization
 INFO: [Opt 31-12] Eliminated 0 unconnected nets.
 INFO: [Opt 31-11] Eliminated 0 unconnected cells.
-Phase 5 BUFG optimization | Checksum: 19cf0f3ab
+Phase 5 BUFG optimization | Checksum: 223d7340e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:51 . Memory (MB): peak = 1052.352 ; gain = 93.543
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:53 . Memory (MB): peak = 1065.973 ; gain = 106.777
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1052.352 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 19cf0f3ab
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1065.973 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 223d7340e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:51 . Memory (MB): peak = 1052.352 ; gain = 93.543
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:53 . Memory (MB): peak = 1065.973 ; gain = 106.777
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-INFO: [Pwropt 34-9] Applying IDT optimizations ...
-INFO: [Pwropt 34-10] Applying ODC optimizations ...
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 7 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
-Ending PowerOpt Patch Enables Task | Checksum: 19cf0f3ab
+Number of BRAM Ports augmented: 2 newly gated: 0 Total Ports: 14
+Ending PowerOpt Patch Enables Task | Checksum: 1ea10f781
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1237.734 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 19cf0f3ab
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1270.238 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1ea10f781
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.922 . Memory (MB): peak = 1237.734 ; gain = 185.383
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1270.238 ; gain = 204.266
 INFO: [Common 17-83] Releasing license: Implementation
 41 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:17 ; elapsed = 00:01:03 . Memory (MB): peak = 1237.734 ; gain = 791.258
+opt_design: Time (s): cpu = 00:00:19 ; elapsed = 00:01:06 . Memory (MB): peak = 1270.238 ; gain = 823.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1270.238 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1/main_opt.dcp' has been generated.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1/main_drc_opted.rpt.
@@ -138,77 +138,79 @@ Starting Placer Task
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
 
 Phase 1 Placer Initialization
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1237.734 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1270.238 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 9d009bff
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 100a2d217
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 1.2 Build Placer Netlist Model
-Phase 1.2 Build Placer Netlist Model | Checksum: e491ad27
+Phase 1.2 Build Placer Netlist Model | Checksum: 19fdfbc0e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 1.3 Constrain Clocks/Macros
-Phase 1.3 Constrain Clocks/Macros | Checksum: e491ad27
+Phase 1.3 Constrain Clocks/Macros | Checksum: 19fdfbc0e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1237.734 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: e491ad27
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1270.238 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 19fdfbc0e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 1a8753aba
+Phase 2 Global Placement | Checksum: 1ecc0f9af
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1a8753aba
+Phase 3.1 Commit Multi Column Macros | Checksum: 1ecc0f9af
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 17635728f
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: f3563df5
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1ed8a0d90
+Phase 3.3 Area Swap Optimization | Checksum: 12f83c623
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1ed8a0d90
+Phase 3.4 Pipeline Register Optimization | Checksum: 12f83c623
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 15f84412f
+Phase 3.5 Timing Path Optimizer | Checksum: 181cfba90
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: f92279f0
+Phase 3.6 Small Shape Detail Placement | Checksum: 1895e7cd9
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 134b19cd1
+Phase 3.7 Re-assign LUT pins | Checksum: 1968727fd
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 134b19cd1
+Phase 3.8 Pipeline Register Optimization | Checksum: 1968727fd
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1237.734 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 134b19cd1
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1270.238 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1968727fd
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -216,47 +218,47 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=27.653. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 178fabdcd
+INFO: [Place 30-746] Post Placement Timing Summary WNS=28.195. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 28514739f
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1237.734 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 178fabdcd
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1270.238 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 28514739f
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 178fabdcd
+Phase 4.2 Post Placement Cleanup | Checksum: 28514739f
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 178fabdcd
+Phase 4.3 Placer Reporting | Checksum: 28514739f
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 205296556
+Phase 4.4 Final Placement Cleanup | Checksum: 2966df1cd
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1237.734 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 205296556
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1270.238 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2966df1cd
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1237.734 ; gain = 0.000
-Ending Placer Task | Checksum: 1d4ec19ea
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1270.238 ; gain = 0.000
+Ending Placer Task | Checksum: 1dfb90543
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1270.238 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-57 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+59 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1237.734 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1270.238 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.297 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.359 . Memory (MB): peak = 1270.238 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1/main_placed.dcp' has been generated.
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1237.734 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1237.734 ; gain = 0.000
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1237.734 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1270.238 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1270.238 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1270.238 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -268,116 +270,123 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: eb154ecf ConstDB: 0 ShapeSum: e9d6cb1b RouteDB: 0
+Checksum: PlaceDB: f02ed0dc ConstDB: 0 ShapeSum: ef8a3467 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: c4df1244
+Phase 1 Build RT Design | Checksum: 1335201ed
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: c4df1244
+Phase 2.1 Create Timer | Checksum: 1335201ed
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: c4df1244
+Phase 2.2 Fix Topology Constraints | Checksum: 1335201ed
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: c4df1244
+Phase 2.3 Pre Route Cleanup | Checksum: 1335201ed
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1270.238 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 176243433
+Phase 2.4 Update Timing | Checksum: 1b749f66b
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1237.734 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=27.752 | TNS=0.000  | WHS=-0.158 | THS=-20.760|
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1270.238 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=28.209 | TNS=0.000  | WHS=-0.163 | THS=-20.670|
 
-Phase 2 Router Initialization | Checksum: e756538e
+Phase 2 Router Initialization | Checksum: 1d0fed551
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1d3c89b75
+Phase 3 Initial Routing | Checksum: 16f50b11b
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 220
+ Number of Nodes with overlaps = 194
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 2408a18ff
+Phase 4.1.1 Update Timing | Checksum: 257b8c5c2
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=27.144 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1270.238 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=27.130 | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 191c9649c
+Phase 4.1 Global Iteration 0 | Checksum: 14cab2f63
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
 
 Phase 4.2.1 Update Timing
-Phase 4.2.1 Update Timing | Checksum: 19ccaddff
+Phase 4.2.1 Update Timing | Checksum: 10cc6342d
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=27.144 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1270.238 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=27.130 | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 1f577b38e
+Phase 4.2 Global Iteration 1 | Checksum: 1e8ad66e4
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
-Phase 4 Rip-up And Reroute | Checksum: 1f577b38e
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1270.238 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 1e8ad66e4
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 1f577b38e
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1636cce0f
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1270.238 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=27.209 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 1636cce0f
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1f577b38e
+Phase 5.2 Clock Skew Optimization | Checksum: 1636cce0f
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
-Phase 5 Delay and Skew Optimization | Checksum: 1f577b38e
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 1636cce0f
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1997dc762
+Phase 6.1.1 Update Timing | Checksum: 1d6766693
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=27.223 | TNS=0.000  | WHS=0.022  | THS=0.000  |
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=27.209 | TNS=0.000  | WHS=0.079  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 222f5cb53
+Phase 6.1 Hold Fix Iter | Checksum: 19fe87a89
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
-Phase 6 Post Hold Fix | Checksum: 222f5cb53
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 19fe87a89
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.513274 %
-  Global Horizontal Routing Utilization  = 0.652395 %
+  Global Vertical Routing Utilization    = 0.817906 %
+  Global Horizontal Routing Utilization  = 1.13795 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -386,43 +395,43 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 17d147021
+Phase 7 Route finalize | Checksum: 1526a3a6b
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 17d147021
+Phase 8 Verifying routed nets | Checksum: 1526a3a6b
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 112d8c03d
+Phase 9 Depositing Routes | Checksum: 1393edbef
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=27.223 | TNS=0.000  | WHS=0.022  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=27.209 | TNS=0.000  | WHS=0.079  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 112d8c03d
+Phase 10 Post Router Timing | Checksum: 1393edbef
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1270.238 ; gain = 0.000
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-71 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+74 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1237.734 ; gain = 0.000
+route_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1270.238 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.359 . Memory (MB): peak = 1237.734 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.453 . Memory (MB): peak = 1270.238 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1/main_routed.dcp' has been generated.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1/main_drc_routed.rpt.
@@ -437,7 +446,7 @@ Command: report_power -file main_power_routed.rpt -pb main_power_summary_routed.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-81 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+84 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 Command: write_bitstream -force -no_partial_bitfile main.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -482,10 +491,10 @@ Creating bitstream...
 Writing bitstream ./main.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Apr 16 15:41:26 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'C:/Users/Student/Desktop/30122/Bia/3.3/3.3.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Apr 16 16:35:26 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-89 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+92 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1551.137 ; gain = 313.402
+write_bitstream: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1572.559 ; gain = 302.320
 INFO: [Vivado_Tcl 4-395] Unable to parse hwdef file main.hwdef
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 16 15:41:27 2018...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 16 16:35:26 2018...

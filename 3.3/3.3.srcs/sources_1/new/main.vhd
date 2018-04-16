@@ -75,6 +75,7 @@ attribute mark_debug of rd1 : signal is "true";
 attribute mark_debug of rd2 : signal is "true";
 attribute mark_debug of extImm : signal is "true";
 attribute mark_debug of funct : signal is "true";
+attribute mark_debug of aluOp : signal is "true";
 attribute mark_debug of sa : signal is "true";
  
  

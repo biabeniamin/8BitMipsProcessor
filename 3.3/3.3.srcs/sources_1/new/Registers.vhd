@@ -34,6 +34,16 @@ signal reg_file : reg_array :=(
 "0000000001000000"
 ); 
 
+signal r0 : std_logic_vector(15 downto 0);
+signal r1 : std_logic_vector(15 downto 0);
+signal r2 : std_logic_vector(15 downto 0);
+signal r3 : std_logic_vector(15 downto 0);
+signal r4 : std_logic_vector(15 downto 0);
+signal r5 : std_logic_vector(15 downto 0);
+signal r6 : std_logic_vector(15 downto 0);
+signal r7 : std_logic_vector(15 downto 0);
+
+
 attribute mark_debug : string;
 attribute mark_debug of reg_file : signal is "true";
 
@@ -55,6 +65,15 @@ begin
     
     rd1 <= reg_file(conv_integer(ra1));
     rd2 <= reg_file(conv_integer(ra2));
+    
+    r0 <= reg_file(0);
+    r1 <= reg_file(1);
+    r2 <= reg_file(2);
+    r3 <= reg_file(3);
+    r4 <= reg_file(4);
+    r5 <= reg_file(5);
+    r6 <= reg_file(6);
+    r7 <= reg_file(7);
 
 end Behavioral;
 

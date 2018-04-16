@@ -90,6 +90,7 @@ begin
         then
             aluOpS <= "01";
             regWriteS <= '1';
+            aluSrcS <= '1';
             
         elsif(instruction(15 downto 13) = "100")--jmp
         then

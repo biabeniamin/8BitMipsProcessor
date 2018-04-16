@@ -9,9 +9,10 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Memory is
     Port ( clk : in STD_LOGIC;
-        ra : in STD_LOGIC_vector(2 downto 0);
+        ra : in STD_LOGIC_vector(15 downto 0);
         wd : in STD_LOGIC_vector(15 downto 0);
         wen : in STD_LOGIC;
+        memWrite : in STD_LOGIC;
         rd : out STD_LOGIC_vector(15 downto 0)
     );
 end Memory;
@@ -32,18 +33,21 @@ signal reg_file : reg_array :=(
 
 begin
 
-    process(clk)
+    process(clk, ra, wd, wen, memWrite)
     begin
-        if(rising_edge(clk))
-        then
-            if(wen = '1')
-            then
-                reg_file(conv_integer(ra)) <= wd;
-                rd <= wd;
-            else
-                rd <= reg_file(conv_integer(ra));
-            end if;
-        end if;
+		if(memWrite = '1')
+		then
+			if(rising_edge(clk))
+			then
+				if(wen = '1')
+				then
+					reg_file(conv_integer(ra)) <= wd;
+					rd <= wd;
+				end if;
+			end if;
+		else
+				rd <= reg_file(conv_integer(ra));
+		end if;
     end process;
     
 

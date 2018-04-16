@@ -18,11 +18,13 @@ set_property ip_output_repo c:/Users/Student/Desktop/30122/Bia/3.3/3.3.cache/ip 
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/Registers.vhd
+  C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/Memory.vhd
   C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/mpg.vhd
   C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/MainControl.vhd
+  C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/InstructFetch.vhd
+  C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/alu.vhd
   C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/7segmentDecoder.vhd
   C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/InstructionDecode.vhd
-  C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/InstructFetch.vhd
   C:/Users/Student/Desktop/30122/Bia/3.3/3.3.srcs/sources_1/new/main.vhd
 }
 foreach dcp [get_files -quiet -all *.dcp] {

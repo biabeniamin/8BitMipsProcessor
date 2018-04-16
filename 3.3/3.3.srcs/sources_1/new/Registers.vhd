@@ -13,6 +13,7 @@ entity Registers is
         ra2 : in STD_LOGIC_vector(2 downto 0);
         wa : in STD_LOGIC_vector(2 downto 0);
         wd : in STD_LOGIC_vector(15 downto 0);
+        regWrite : in STD_LOGIC;
         wen : in STD_LOGIC;
         rd1 : out STD_LOGIC_vector(15 downto 0);
         rd2 : out STD_LOGIC_vector(15 downto 0)
@@ -44,7 +45,10 @@ begin
         then
             if(wen = '1')
             then
-                reg_file(conv_integer(wa)) <= wd;
+                if(regWrite = '1')
+                then
+                    reg_file(conv_integer(wa)) <= wd;
+                end if;
             end if;
         end if;
     end process;

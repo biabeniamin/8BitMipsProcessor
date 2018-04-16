@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date             : Mon Apr 02 15:50:03 2018
+| Date             : Mon Apr 16 15:41:09 2018
 | Host             : O205-27 running 64-bit major release  (build 9200)
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.082 |
-| Dynamic (W)              | 0.011 |
+| Total On-Chip Power (W)  | 0.078 |
+| Dynamic (W)              | 0.006 |
 | Device Static (W)        | 0.072 |
 | Effective TJA (C/W)      | 5.0   |
 | Max Ambient (C)          | 84.6  |
@@ -50,20 +50,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     3243 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      967 |     20800 |            4.65 |
-|   LUT as Distributed RAM |    <0.001 |       48 |      9600 |            0.50 |
-|   Register               |    <0.001 |     1636 |     41600 |            3.93 |
+| Slice Logic              |    <0.001 |     3671 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1280 |     20800 |            6.15 |
+|   Register               |    <0.001 |     1700 |     41600 |            4.09 |
+|   CARRY4                 |    <0.001 |       57 |      8150 |            0.70 |
 |   LUT as Shift Register  |    <0.001 |       96 |      9600 |            1.00 |
-|   CARRY4                 |    <0.001 |       49 |      8150 |            0.60 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes            |    <0.001 |        3 |     32600 |           <0.01 |
-|   Others                 |     0.000 |      202 |       --- |             --- |
-| Signals                  |    <0.001 |     2387 |       --- |             --- |
+|   LUT as Distributed RAM |    <0.001 |       40 |      9600 |            0.42 |
+|   F7/F8 Muxes            |    <0.001 |       19 |     32600 |            0.06 |
+|   Others                 |     0.000 |      210 |       --- |             --- |
+| Signals                  |    <0.001 |     2744 |       --- |             --- |
 | Block RAM                |    <0.001 |        1 |        50 |            2.00 |
-| I/O                      |     0.008 |       33 |       106 |           31.13 |
+| I/O                      |     0.004 |       34 |       106 |           32.08 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.082 |          |           |                 |
+| Total                    |     0.078 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.012 |       0.002 |      0.010 |
+| Vccint    |       1.000 |     0.011 |       0.002 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -142,7 +142,8 @@ Table of Contents
 +----------------------------------------------------------------------------------+-----------+
 | Name                                                                             | Power (W) |
 +----------------------------------------------------------------------------------+-----------+
-| main                                                                             |     0.011 |
+| main                                                                             |     0.006 |
+|   alu                                                                            |    <0.001 |
 |   dbg_hub                                                                        |     0.001 |
 |     inst                                                                         |     0.001 |
 |       CORE_XSDB.UUT_MASTER                                                       |    <0.001 |
@@ -187,9 +188,9 @@ Table of Contents
 |                   gconvfifo.rf                                                   |    <0.001 |
 |                     grf.rf                                                       |    <0.001 |
 |                       gntv_or_sync_fifo.gcx.clkx                                 |    <0.001 |
-|                         gnxpm_cdc.gsync_stage[1].rd_stg_inst                     |    <0.001 |
+|                         gnxpm_cdc.gsync_stage[1].rd_stg_inst                     |     0.000 |
 |                         gnxpm_cdc.gsync_stage[1].wr_stg_inst                     |    <0.001 |
-|                         gnxpm_cdc.gsync_stage[2].rd_stg_inst                     |    <0.001 |
+|                         gnxpm_cdc.gsync_stage[2].rd_stg_inst                     |     0.000 |
 |                         gnxpm_cdc.gsync_stage[2].wr_stg_inst                     |    <0.001 |
 |                       gntv_or_sync_fifo.gl0.rd                                   |    <0.001 |
 |                         gras.rsts                                                |    <0.001 |
@@ -225,13 +226,24 @@ Table of Contents
 |       SWITCH_N_EXT_BSCAN.bscan_switch                                            |    <0.001 |
 |   ic                                                                             |    <0.001 |
 |     reg                                                                          |    <0.001 |
-|       reg_file_reg_r1_0_7_0_5                                                    |    <0.001 |
-|       reg_file_reg_r1_0_7_12_15                                                  |    <0.001 |
-|       reg_file_reg_r1_0_7_6_11                                                   |    <0.001 |
-|       reg_file_reg_r2_0_7_0_5                                                    |    <0.001 |
-|       reg_file_reg_r2_0_7_12_15                                                  |    <0.001 |
-|       reg_file_reg_r2_0_7_6_11                                                   |    <0.001 |
 |   insfet                                                                         |    <0.001 |
+|   memory                                                                         |    <0.001 |
+|     reg_file_reg_0_7_0_0                                                         |     0.000 |
+|     reg_file_reg_0_7_10_10                                                       |     0.000 |
+|     reg_file_reg_0_7_11_11                                                       |     0.000 |
+|     reg_file_reg_0_7_12_12                                                       |     0.000 |
+|     reg_file_reg_0_7_13_13                                                       |     0.000 |
+|     reg_file_reg_0_7_14_14                                                       |     0.000 |
+|     reg_file_reg_0_7_15_15                                                       |     0.000 |
+|     reg_file_reg_0_7_1_1                                                         |     0.000 |
+|     reg_file_reg_0_7_2_2                                                         |     0.000 |
+|     reg_file_reg_0_7_3_3                                                         |     0.000 |
+|     reg_file_reg_0_7_4_4                                                         |     0.000 |
+|     reg_file_reg_0_7_5_5                                                         |     0.000 |
+|     reg_file_reg_0_7_6_6                                                         |     0.000 |
+|     reg_file_reg_0_7_7_7                                                         |     0.000 |
+|     reg_file_reg_0_7_8_8                                                         |     0.000 |
+|     reg_file_reg_0_7_9_9                                                         |     0.000 |
 |   mpgInstance                                                                    |    <0.001 |
 |   mpgInstance2                                                                   |    <0.001 |
 |   segmentDecoder                                                                 |    <0.001 |
@@ -391,6 +403,7 @@ Table of Contents
 |                     u_srlC                                                       |     0.000 |
 |                     u_srlD                                                       |     0.000 |
 |         xsdb_memory_read_inst                                                    |    <0.001 |
+|   uc                                                                             |    <0.001 |
 +----------------------------------------------------------------------------------+-----------+
 
 

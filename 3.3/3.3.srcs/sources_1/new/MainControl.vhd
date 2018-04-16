@@ -70,12 +70,14 @@ begin
             
         elsif(instruction(15 downto 13) = "001")--lw instruction
         then
+            aluOpS <= "01";
             memToRegS <= '1';
             aluSrcS <= '1';
             regWriteS <= '1';
                         
         elsif(instruction(15 downto 13) = "010")--sw 
         then
+            aluOpS <= "01";
             aluSrcS <= '1';
             memWriteS <= '1';
             

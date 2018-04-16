@@ -61,7 +61,8 @@ begin
            rd1 => rd1,
             rd2 => rd2,
             wd => wd,
-            wen => regWrite
+            regWrite => regWrite,
+            wen => wen
         );
         
     funct <= instruction(2 downto 0);

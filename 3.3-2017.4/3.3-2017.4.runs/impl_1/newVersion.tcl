@@ -67,17 +67,12 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param tcl.collectionResultDisplayLimit 0
   set_param xicom.use_bs_reader 1
-  create_project -in_memory -part xc7z020clg400-1
-  set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.runs/impl_1/newVersion.dcp
   set_property webtalk.parent_dir D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.cache/wt [current_project]
   set_property parent.project_path D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.xpr [current_project]
   set_property ip_output_repo D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.runs/synth_1/newVersion.dcp
-  read_xdc D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.srcs/constrs_1/imports/Desktop/Zybo-Z7-Master.xdc
-  link_design -top newVersion -part xc7z020clg400-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

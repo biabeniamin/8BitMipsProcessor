@@ -36,6 +36,8 @@ read_vhdl -library xil_defaultlib {
   D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/Registers.vhd
   D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/InstructionDecode.vhd
   D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/MainControl.vhd
+  D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/Memory.vhd
+  D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/alu.vhd
   D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/mpg.vhd
   D:/Beni/Vhdl/ac/3.3/3.3.srcs/sources_1/new/main.vhd
   D:/Beni/Vhdl/ac/3.3-2017.4/3.3-2017.4.srcs/sources_1/new/newVersion.vhd

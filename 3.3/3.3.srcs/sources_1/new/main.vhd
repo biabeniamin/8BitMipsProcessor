@@ -41,7 +41,7 @@ signal jumpAddress : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal currentInstruction : std_logic_vector(15 downto 0);
 signal nextInstruction : std_logic_vector(15 downto 0);
 attribute mark_debug of currentInstruction : signal is "true";
-attribute mark_debug of nextInstruction : signal is "true";
+
 
 signal registerWD : std_logic_vector(15 downto 0);
 signal reset : std_logic;
@@ -56,6 +56,7 @@ signal aluOp : STD_LOGIC_VECTOR(1 DOWNTO 0);
 signal memWrite : STD_LOGIC;
 signal memToReg : STD_LOGIC;
 signal regWrite : STD_LOGIC;
+signal pCSrcControl  : STD_LOGIC;
 
 --signals for alu
 signal aluRes : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -73,10 +74,11 @@ signal funct : STD_LOGIC_VECTOR(2 DOWNTO 0);
 signal sa : STD_LOGIC;
 attribute mark_debug of rd1 : signal is "true";
 attribute mark_debug of rd2 : signal is "true";
-attribute mark_debug of extImm : signal is "true";
+
 attribute mark_debug of funct : signal is "true";
 attribute mark_debug of aluOp : signal is "true";
 attribute mark_debug of sa : signal is "true";
+attribute mark_debug of branch : signal is "true";
  
  
 Begin
@@ -86,6 +88,8 @@ Begin
             aluRes when '0';
             
     jumpAddress <=  nextInstruction(15 downto 13 ) & currentInstruction(12 downto 0);
+    
+    pCSrcControl <= branch and zero;
     
     memory : entity work.Memory
         Port map( clk => clk,
@@ -129,9 +133,9 @@ Begin
     port map ( clk =>clk,
         clkEnable => mpgDebouncedButton,
         branchAddress => branchAddress,
-        jumpAddress => x"0000",
+        jumpAddress => jumpAddress,
         jumpControl => jump,
-        pCSrcControl => branch,
+        pCSrcControl => pCSrcControl,
         clear => reset,
         currentInstruction => currentInstruction,
         nextInstruction => nextInstruction

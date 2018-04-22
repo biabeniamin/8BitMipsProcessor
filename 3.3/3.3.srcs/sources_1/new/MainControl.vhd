@@ -83,7 +83,8 @@ begin
             
         elsif(instruction(15 downto 13) = "011")--beq
         then
-            aluOpS <= "01";
+            aluOpS <= "11";
+            extOpS <= '1';
             branchS <= '1';
             
         elsif(instruction(15 downto 13) = "101")--addi

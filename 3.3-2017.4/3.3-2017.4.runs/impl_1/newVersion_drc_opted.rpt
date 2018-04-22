@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun Apr 15 16:18:18 2018
+| Date         : Sun Apr 22 23:19:44 2018
 | Host         : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 | Command      : report_drc -file newVersion_drc_opted.rpt -pb newVersion_drc_opted.pb -rpx newVersion_drc_opted.rpx
 | Design       : newVersion
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: design_1
+          Floorplan: checkpoint_newVersion
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>

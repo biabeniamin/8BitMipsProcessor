@@ -28,6 +28,7 @@ signal aluControl : STD_LOGIC_VECTOR(3 downto 0);
 attribute mark_debug : string;
 
 attribute mark_debug of aluIn2 : signal is "true";
+attribute mark_debug of zero : signal is "true";
 
 begin
 
@@ -70,12 +71,19 @@ begin
                     then
                         result <= rd1 xor rd2;
                     end if;
+                elsif aluOp = "11"
+                then
+                    result <= rd1 - aluIn2;
                 end if; 
     end process;
     
     aluRes <= result;
     
     branchAddressS <= nextInstruction + extImm;
+    
+    with result select
+        zero <= '1' when x"0000",
+            '0' when others;
     
     --selecting register 2
     with aluSrc select

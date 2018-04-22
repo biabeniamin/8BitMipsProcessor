@@ -10,16 +10,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <ZoomEndTime time="7761fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="398"></NameColumnWidth>
+      <NameColumnWidth column_width="394"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
-   <wave_markers>
-   </wave_markers>
+   <WVObjectSize size="15" />
    <wvobject fp_name="ic/rd1" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">ic/rd1[15:0]</obj_property>
@@ -36,60 +34,89 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="ic/uc/aluOpS" type="array">
+   <wvobject fp_name="ic/insfet/pc" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/uc/aluOpS[1:0]</obj_property>
-      <obj_property name="ObjectShortName">aluOpS[1:0]</obj_property>
+      <obj_property name="ElementShortName">ic/insfet/pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="ic/uc/aluSrcS" type="logic">
+   <wvobject fp_name="ic/ic/reg/reg_file[0]_0" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/uc/aluSrcS</obj_property>
-      <obj_property name="ObjectShortName">aluSrcS</obj_property>
+      <obj_property name="ElementShortName">ic/ic/reg/reg_file[0]_0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[0]_0[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="ic/uc/branchS" type="logic">
+   <wvobject fp_name="ic/ic/reg/reg_file[1]_1" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/uc/branchS</obj_property>
-      <obj_property name="ObjectShortName">branchS</obj_property>
+      <obj_property name="ElementShortName">ic/ic/reg/reg_file[1]_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[1]_1[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="ic/uc/jumpS" type="logic">
+   <wvobject fp_name="ic/ic/reg/reg_file[2]_2" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/uc/jumpS</obj_property>
-      <obj_property name="ObjectShortName">jumpS</obj_property>
+      <obj_property name="ElementShortName">ic/ic/reg/reg_file[2]_2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[2]_2[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="ic/uc/memToRegS" type="logic">
+   <wvobject fp_name="ic/ic/reg/reg_file[3]_3" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/uc/memToRegS</obj_property>
-      <obj_property name="ObjectShortName">memToRegS</obj_property>
+      <obj_property name="ElementShortName">ic/ic/reg/reg_file[3]_3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[3]_3[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="ic/uc/memWriteS" type="logic">
+   <wvobject fp_name="ic/ic/reg/reg_file[4]_4" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/uc/memWriteS</obj_property>
-      <obj_property name="ObjectShortName">memWriteS</obj_property>
+      <obj_property name="ElementShortName">ic/ic/reg/reg_file[4]_4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[4]_4[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="ic/uc/regDstS" type="logic">
+   <wvobject fp_name="ic/ic/reg/reg_file[5]_5" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/uc/regDstS</obj_property>
-      <obj_property name="ObjectShortName">regDstS</obj_property>
+      <obj_property name="ElementShortName">ic/ic/reg/reg_file[5]_5[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[5]_5[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="ic/nextInstruction" type="array">
+   <wvobject fp_name="ic/ic/reg/reg_file[6]_6" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/nextInstruction[15:0]</obj_property>
-      <obj_property name="ObjectShortName">nextInstruction[15:0]</obj_property>
+      <obj_property name="ElementShortName">ic/ic/reg/reg_file[6]_6[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[6]_6[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="ic/ic/reg/reg_file[7]_7" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ic/ic/reg/reg_file[7]_7[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[7]_7[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="ic/alu/zero" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ic/alu/zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_extImm" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_extImm[6:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_extImm[6:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -101,26 +128,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="ic/insfet/pc" type="array">
+   <wvobject fp_name="ic/branch" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/insfet/pc[15:0]</obj_property>
-      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="ic/insfet/jumpControl" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/insfet/jumpControl</obj_property>
-      <obj_property name="ObjectShortName">jumpControl</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="ic/insfet/pc" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">ic/insfet/pc[15:0]</obj_property>
-      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">ic/branch</obj_property>
+      <obj_property name="ObjectShortName">branch</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

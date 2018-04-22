@@ -202,6 +202,7 @@ set_property -dict {PACKAGE_PIN Y16 IOSTANDARD LVCMOS33} [get_ports {btnH[3]}]
 
 
 
+
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
@@ -215,87 +216,53 @@ set_property port_width 1 [get_debug_ports u_ila_0/clk]
 connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG]]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
 set_property port_width 16 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {ic/insfet/pc[0]} {ic/insfet/pc[1]} {ic/insfet/pc[2]} {ic/insfet/pc[3]} {ic/insfet/pc[4]} {ic/insfet/pc[5]} {ic/insfet/pc[6]} {ic/insfet/pc[7]} {ic/insfet/pc[8]} {ic/insfet/pc[9]} {ic/insfet/pc[10]} {ic/insfet/pc[11]} {ic/insfet/pc[12]} {ic/insfet/pc[13]} {ic/insfet/pc[14]} {ic/insfet/pc[15]}]]
+connect_debug_port u_ila_0/probe0 [get_nets [list {ic/rd2[0]} {ic/rd2[1]} {ic/rd2[2]} {ic/rd2[3]} {ic/rd2[4]} {ic/rd2[5]} {ic/rd2[6]} {ic/rd2[7]} {ic/rd2[8]} {ic/rd2[9]} {ic/rd2[10]} {ic/rd2[11]} {ic/rd2[12]} {ic/rd2[13]} {ic/rd2[14]} {ic/rd2[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-set_property port_width 2 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {ic/uc/aluOpS[0]} {ic/uc/aluOpS[1]}]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {ic/rd1[0]} {ic/rd1[1]} {ic/rd1[2]} {ic/rd1[3]} {ic/rd1[4]} {ic/rd1[5]} {ic/rd1[6]} {ic/rd1[7]} {ic/rd1[8]} {ic/rd1[9]} {ic/rd1[10]} {ic/rd1[11]} {ic/rd1[12]} {ic/rd1[13]} {ic/rd1[14]} {ic/rd1[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
 set_property port_width 16 [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list {ic/rd2[0]} {ic/rd2[1]} {ic/rd2[2]} {ic/rd2[3]} {ic/rd2[4]} {ic/rd2[5]} {ic/rd2[6]} {ic/rd2[7]} {ic/rd2[8]} {ic/rd2[9]} {ic/rd2[10]} {ic/rd2[11]} {ic/rd2[12]} {ic/rd2[13]} {ic/rd2[14]} {ic/rd2[15]}]]
+connect_debug_port u_ila_0/probe2 [get_nets [list {ic/insfet/pc[0]} {ic/insfet/pc[1]} {ic/insfet/pc[2]} {ic/insfet/pc[3]} {ic/insfet/pc[4]} {ic/insfet/pc[5]} {ic/insfet/pc[6]} {ic/insfet/pc[7]} {ic/insfet/pc[8]} {ic/insfet/pc[9]} {ic/insfet/pc[10]} {ic/insfet/pc[11]} {ic/insfet/pc[12]} {ic/insfet/pc[13]} {ic/insfet/pc[14]} {ic/insfet/pc[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
 set_property port_width 16 [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list {ic/nextInstruction[0]} {ic/nextInstruction[1]} {ic/nextInstruction[2]} {ic/nextInstruction[3]} {ic/nextInstruction[4]} {ic/nextInstruction[5]} {ic/nextInstruction[6]} {ic/nextInstruction[7]} {ic/nextInstruction[8]} {ic/nextInstruction[9]} {ic/nextInstruction[10]} {ic/nextInstruction[11]} {ic/nextInstruction[12]} {ic/nextInstruction[13]} {ic/nextInstruction[14]} {ic/nextInstruction[15]}]]
+connect_debug_port u_ila_0/probe3 [get_nets [list {ic/ic/reg/reg_file[2]_2[0]} {ic/ic/reg/reg_file[2]_2[1]} {ic/ic/reg/reg_file[2]_2[2]} {ic/ic/reg/reg_file[2]_2[3]} {ic/ic/reg/reg_file[2]_2[4]} {ic/ic/reg/reg_file[2]_2[5]} {ic/ic/reg/reg_file[2]_2[6]} {ic/ic/reg/reg_file[2]_2[7]} {ic/ic/reg/reg_file[2]_2[8]} {ic/ic/reg/reg_file[2]_2[9]} {ic/ic/reg/reg_file[2]_2[10]} {ic/ic/reg/reg_file[2]_2[11]} {ic/ic/reg/reg_file[2]_2[12]} {ic/ic/reg/reg_file[2]_2[13]} {ic/ic/reg/reg_file[2]_2[14]} {ic/ic/reg/reg_file[2]_2[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
 set_property port_width 16 [get_debug_ports u_ila_0/probe4]
-connect_debug_port u_ila_0/probe4 [get_nets [list {ic/rd1[0]} {ic/rd1[1]} {ic/rd1[2]} {ic/rd1[3]} {ic/rd1[4]} {ic/rd1[5]} {ic/rd1[6]} {ic/rd1[7]} {ic/rd1[8]} {ic/rd1[9]} {ic/rd1[10]} {ic/rd1[11]} {ic/rd1[12]} {ic/rd1[13]} {ic/rd1[14]} {ic/rd1[15]}]]
+connect_debug_port u_ila_0/probe4 [get_nets [list {ic/ic/reg/reg_file[0]_0[0]} {ic/ic/reg/reg_file[0]_0[1]} {ic/ic/reg/reg_file[0]_0[2]} {ic/ic/reg/reg_file[0]_0[3]} {ic/ic/reg/reg_file[0]_0[4]} {ic/ic/reg/reg_file[0]_0[5]} {ic/ic/reg/reg_file[0]_0[6]} {ic/ic/reg/reg_file[0]_0[7]} {ic/ic/reg/reg_file[0]_0[8]} {ic/ic/reg/reg_file[0]_0[9]} {ic/ic/reg/reg_file[0]_0[10]} {ic/ic/reg/reg_file[0]_0[11]} {ic/ic/reg/reg_file[0]_0[12]} {ic/ic/reg/reg_file[0]_0[13]} {ic/ic/reg/reg_file[0]_0[14]} {ic/ic/reg/reg_file[0]_0[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
 set_property port_width 16 [get_debug_ports u_ila_0/probe5]
-connect_debug_port u_ila_0/probe5 [get_nets [list {ic/extImm[0]} {ic/extImm[1]} {ic/extImm[2]} {ic/extImm[3]} {ic/extImm[4]} {ic/extImm[5]} {ic/extImm[6]} {ic/extImm[7]} {ic/extImm[8]} {ic/extImm[9]} {ic/extImm[10]} {ic/extImm[11]} {ic/extImm[12]} {ic/extImm[13]} {ic/extImm[14]} {ic/extImm[15]}]]
+connect_debug_port u_ila_0/probe5 [get_nets [list {ic/ic/reg/reg_file[1]_1[0]} {ic/ic/reg/reg_file[1]_1[1]} {ic/ic/reg/reg_file[1]_1[2]} {ic/ic/reg/reg_file[1]_1[3]} {ic/ic/reg/reg_file[1]_1[4]} {ic/ic/reg/reg_file[1]_1[5]} {ic/ic/reg/reg_file[1]_1[6]} {ic/ic/reg/reg_file[1]_1[7]} {ic/ic/reg/reg_file[1]_1[8]} {ic/ic/reg/reg_file[1]_1[9]} {ic/ic/reg/reg_file[1]_1[10]} {ic/ic/reg/reg_file[1]_1[11]} {ic/ic/reg/reg_file[1]_1[12]} {ic/ic/reg/reg_file[1]_1[13]} {ic/ic/reg/reg_file[1]_1[14]} {ic/ic/reg/reg_file[1]_1[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
 set_property port_width 16 [get_debug_ports u_ila_0/probe6]
-connect_debug_port u_ila_0/probe6 [get_nets [list {ic/currentInstruction[0]} {ic/currentInstruction[1]} {ic/currentInstruction[2]} {ic/currentInstruction[3]} {ic/currentInstruction[4]} {ic/currentInstruction[5]} {ic/currentInstruction[6]} {ic/currentInstruction[7]} {ic/currentInstruction[8]} {ic/currentInstruction[9]} {ic/currentInstruction[10]} {ic/currentInstruction[11]} {ic/currentInstruction[12]} {ic/currentInstruction[13]} {ic/currentInstruction[14]} {ic/currentInstruction[15]}]]
+connect_debug_port u_ila_0/probe6 [get_nets [list {ic/ic/reg/reg_file[3]_3[0]} {ic/ic/reg/reg_file[3]_3[1]} {ic/ic/reg/reg_file[3]_3[2]} {ic/ic/reg/reg_file[3]_3[3]} {ic/ic/reg/reg_file[3]_3[4]} {ic/ic/reg/reg_file[3]_3[5]} {ic/ic/reg/reg_file[3]_3[6]} {ic/ic/reg/reg_file[3]_3[7]} {ic/ic/reg/reg_file[3]_3[8]} {ic/ic/reg/reg_file[3]_3[9]} {ic/ic/reg/reg_file[3]_3[10]} {ic/ic/reg/reg_file[3]_3[11]} {ic/ic/reg/reg_file[3]_3[12]} {ic/ic/reg/reg_file[3]_3[13]} {ic/ic/reg/reg_file[3]_3[14]} {ic/ic/reg/reg_file[3]_3[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
-set_property port_width 3 [get_debug_ports u_ila_0/probe7]
-connect_debug_port u_ila_0/probe7 [get_nets [list {ic/funct[0]} {ic/funct[1]} {ic/funct[2]}]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {ic/ic/reg/reg_file[4]_4[0]} {ic/ic/reg/reg_file[4]_4[1]} {ic/ic/reg/reg_file[4]_4[2]} {ic/ic/reg/reg_file[4]_4[3]} {ic/ic/reg/reg_file[4]_4[4]} {ic/ic/reg/reg_file[4]_4[5]} {ic/ic/reg/reg_file[4]_4[6]} {ic/ic/reg/reg_file[4]_4[7]} {ic/ic/reg/reg_file[4]_4[8]} {ic/ic/reg/reg_file[4]_4[9]} {ic/ic/reg/reg_file[4]_4[10]} {ic/ic/reg/reg_file[4]_4[11]} {ic/ic/reg/reg_file[4]_4[12]} {ic/ic/reg/reg_file[4]_4[13]} {ic/ic/reg/reg_file[4]_4[14]} {ic/ic/reg/reg_file[4]_4[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
 set_property port_width 16 [get_debug_ports u_ila_0/probe8]
-connect_debug_port u_ila_0/probe8 [get_nets [list {ic/display[0]} {ic/display[1]} {ic/display[2]} {ic/display[3]} {ic/display[4]} {ic/display[5]} {ic/display[6]} {ic/display[7]} {ic/display[8]} {ic/display[9]} {ic/display[10]} {ic/display[11]} {ic/display[12]} {ic/display[13]} {ic/display[14]} {ic/display[15]}]]
+connect_debug_port u_ila_0/probe8 [get_nets [list {ic/ic/reg/reg_file[5]_5[0]} {ic/ic/reg/reg_file[5]_5[1]} {ic/ic/reg/reg_file[5]_5[2]} {ic/ic/reg/reg_file[5]_5[3]} {ic/ic/reg/reg_file[5]_5[4]} {ic/ic/reg/reg_file[5]_5[5]} {ic/ic/reg/reg_file[5]_5[6]} {ic/ic/reg/reg_file[5]_5[7]} {ic/ic/reg/reg_file[5]_5[8]} {ic/ic/reg/reg_file[5]_5[9]} {ic/ic/reg/reg_file[5]_5[10]} {ic/ic/reg/reg_file[5]_5[11]} {ic/ic/reg/reg_file[5]_5[12]} {ic/ic/reg/reg_file[5]_5[13]} {ic/ic/reg/reg_file[5]_5[14]} {ic/ic/reg/reg_file[5]_5[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
-set_property port_width 1 [get_debug_ports u_ila_0/probe9]
-connect_debug_port u_ila_0/probe9 [get_nets [list ic/uc/aluSrcS]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {ic/ic/reg/reg_file[7]_7[0]} {ic/ic/reg/reg_file[7]_7[1]} {ic/ic/reg/reg_file[7]_7[2]} {ic/ic/reg/reg_file[7]_7[3]} {ic/ic/reg/reg_file[7]_7[4]} {ic/ic/reg/reg_file[7]_7[5]} {ic/ic/reg/reg_file[7]_7[6]} {ic/ic/reg/reg_file[7]_7[7]} {ic/ic/reg/reg_file[7]_7[8]} {ic/ic/reg/reg_file[7]_7[9]} {ic/ic/reg/reg_file[7]_7[10]} {ic/ic/reg/reg_file[7]_7[11]} {ic/ic/reg/reg_file[7]_7[12]} {ic/ic/reg/reg_file[7]_7[13]} {ic/ic/reg/reg_file[7]_7[14]} {ic/ic/reg/reg_file[7]_7[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
-set_property port_width 1 [get_debug_ports u_ila_0/probe10]
-connect_debug_port u_ila_0/probe10 [get_nets [list ic/uc/branchS]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
-set_property port_width 1 [get_debug_ports u_ila_0/probe11]
-connect_debug_port u_ila_0/probe11 [get_nets [list ic/uc/extOpS]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
-set_property port_width 1 [get_debug_ports u_ila_0/probe12]
-connect_debug_port u_ila_0/probe12 [get_nets [list ic/insfet/jumpControl]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
-set_property port_width 1 [get_debug_ports u_ila_0/probe13]
-connect_debug_port u_ila_0/probe13 [get_nets [list ic/uc/jumpS]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe14]
-set_property port_width 1 [get_debug_ports u_ila_0/probe14]
-connect_debug_port u_ila_0/probe14 [get_nets [list ic/uc/memToRegS]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe15]
-set_property port_width 1 [get_debug_ports u_ila_0/probe15]
-connect_debug_port u_ila_0/probe15 [get_nets [list ic/uc/memWriteS]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe16]
-set_property port_width 1 [get_debug_ports u_ila_0/probe16]
-connect_debug_port u_ila_0/probe16 [get_nets [list ic/mpgDebouncedButton]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe17]
-set_property port_width 1 [get_debug_ports u_ila_0/probe17]
-connect_debug_port u_ila_0/probe17 [get_nets [list ic/insfet/pCSrcControl]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe18]
-set_property port_width 1 [get_debug_ports u_ila_0/probe18]
-connect_debug_port u_ila_0/probe18 [get_nets [list ic/uc/regDstS]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe19]
-set_property port_width 1 [get_debug_ports u_ila_0/probe19]
-connect_debug_port u_ila_0/probe19 [get_nets [list ic/uc/regWriteS]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe20]
-set_property port_width 1 [get_debug_ports u_ila_0/probe20]
-connect_debug_port u_ila_0/probe20 [get_nets [list ic/sa]]
+set_property port_width 45 [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list {ic/ic/reg/reg_file[6]_6[0]} {ic/ic/reg/reg_file[6]_6[1]} {ic/ic/reg/reg_file[6]_6[2]} {ic/ic/reg/reg_file[6]_6[3]} {ic/ic/reg/reg_file[6]_6[4]} {ic/ic/reg/reg_file[6]_6[5]} {ic/ic/reg/reg_file[6]_6[6]} {ic/ic/reg/reg_file[6]_6[7]} {ic/ic/reg/reg_file[6]_6[8]} {ic/ic/reg/reg_file[6]_6[9]} {ic/ic/reg/reg_file[6]_6[10]} {ic/ic/reg/reg_file[6]_6[11]} {ic/ic/reg/reg_file[6]_6[12]} {ic/ic/reg/reg_file[6]_6[13]} {ic/ic/reg/reg_file[6]_6[14]} {ic/ic/reg/reg_file[6]_6[15]} ic/mpgDebouncedButton ic/alu/zero {ic/alu/extImm[0]} {ic/alu/extImm[1]} {ic/alu/extImm[2]} {ic/alu/extImm[3]} {ic/alu/extImm[4]} {ic/alu/extImm[5]} {ic/alu/extImm[6]} {ic/alu/extImm[7]} {ic/insfet/branchAddress[0]} ic/insfet/pCSrcControl {ic/extImm[0]} {ic/extImm[1]} {ic/extImm[2]} {ic/extImm[3]} {ic/extImm[4]} {ic/extImm[5]} {ic/extImm[6]} {ic/extImm[7]} {ic/extImm[8]} {ic/extImm[9]} {ic/extImm[10]} {ic/extImm[11]} {ic/extImm[12]} {ic/extImm[13]} {ic/extImm[14]} {ic/extImm[15]} ic/branch]]
+
+
+
+
+
+
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

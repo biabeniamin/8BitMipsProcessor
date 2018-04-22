@@ -87,6 +87,18 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../3.3/3.3.srcs/sources_1/new/Memory.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../3.3/3.3.srcs/sources_1/new/alu.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../3.3/3.3.srcs/sources_1/new/mpg.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>

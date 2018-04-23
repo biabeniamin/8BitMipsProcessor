@@ -14,10 +14,10 @@
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="110"></NameColumnWidth>
-      <ValueColumnWidth column_width="170"></ValueColumnWidth>
+      <NameColumnWidth column_width="171"></NameColumnWidth>
+      <ValueColumnWidth column_width="107"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="20" />
    <wave_markers>
    </wave_markers>
    <wvobject fp_name="insfet/pc" type="array">
@@ -121,6 +121,39 @@
       <obj_property name="ElementShortName">alu/aluIn2[15:0]</obj_property>
       <obj_property name="ObjectShortName">aluIn2[15:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="insfet/nextInstr_1" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">insfet/nextInstr_1[14:0]</obj_property>
+      <obj_property name="ObjectShortName">nextInstr_1[14:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="insfet/nextInstr" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">insfet/nextInstr[15:15]</obj_property>
+      <obj_property name="ObjectShortName">nextInstr[15:15]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="insfet/branchAddress" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">insfet/branchAddress[15:0]</obj_property>
+      <obj_property name="ObjectShortName">branchAddress[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="insfet/pCSrcControl" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">insfet/pCSrcControl</obj_property>
+      <obj_property name="ObjectShortName">pCSrcControl</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="insfet/jumpControl" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">insfet/jumpControl</obj_property>
+      <obj_property name="ObjectShortName">jumpControl</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>

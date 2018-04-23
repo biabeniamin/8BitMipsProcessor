@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7a35t_0_2" gui_info="dashboard1=hw_ila_1[xc7a35t_0_2/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a35t_0_2/hw_ila_1/Waveform=ILA_WAVE_1;xc7a35t_0_2/hw_ila_1/Status=ILA_STATUS_1;xc7a35t_0_2/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;]"/>
+  <device name="xc7a35t_0" gui_info="dashboard1=hw_ila_1[xc7a35t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a35t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a35t_0/hw_ila_1/Waveform=ILA_WAVE_1;xc7a35t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a35t_0" gui_info="">
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
@@ -32,7 +32,7 @@
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="display[15:0]" gui_info=""/>
     <Object name="insfet/pc[15:0]" gui_info=""/>
-    <Object name="mpgDebouncedButton" gui_info=""/>
+    <Object name="mpgDebouncedButton" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -83,6 +83,38 @@
       <nets>
         <net name="aluOp[1]"/>
         <net name="aluOp[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe0[246:231]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="branchAddress[15]"/>
+        <net name="branchAddress[14]"/>
+        <net name="branchAddress[13]"/>
+        <net name="branchAddress[12]"/>
+        <net name="branchAddress[11]"/>
+        <net name="branchAddress[10]"/>
+        <net name="branchAddress[9]"/>
+        <net name="branchAddress[8]"/>
+        <net name="branchAddress[7]"/>
+        <net name="branchAddress[6]"/>
+        <net name="branchAddress[5]"/>
+        <net name="branchAddress[4]"/>
+        <net name="branchAddress[3]"/>
+        <net name="branchAddress[2]"/>
+        <net name="branchAddress[1]"/>
+        <net name="branchAddress[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -392,6 +424,38 @@
         <net name="ic/reg/reg_file[7]_7[0]"/>
       </nets>
     </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe0[246:231]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="insfet/branchAddress[15]"/>
+        <net name="insfet/branchAddress[14]"/>
+        <net name="insfet/branchAddress[13]"/>
+        <net name="insfet/branchAddress[12]"/>
+        <net name="insfet/branchAddress[11]"/>
+        <net name="insfet/branchAddress[10]"/>
+        <net name="insfet/branchAddress[9]"/>
+        <net name="insfet/branchAddress[8]"/>
+        <net name="insfet/branchAddress[7]"/>
+        <net name="insfet/branchAddress[6]"/>
+        <net name="insfet/branchAddress[5]"/>
+        <net name="insfet/branchAddress[4]"/>
+        <net name="insfet/branchAddress[3]"/>
+        <net name="insfet/branchAddress[2]"/>
+        <net name="insfet/branchAddress[1]"/>
+        <net name="insfet/branchAddress[0]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
@@ -407,6 +471,54 @@
       </probeOptions>
       <nets>
         <net name="insfet/jumpControl"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe0[247]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="insfet/nextInstr[15]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq15&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq15&apos;hXXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe0[230:216]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq15&apos;hXXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="insfet/nextInstr_1[14]"/>
+        <net name="insfet/nextInstr_1[13]"/>
+        <net name="insfet/nextInstr_1[12]"/>
+        <net name="insfet/nextInstr_1[11]"/>
+        <net name="insfet/nextInstr_1[10]"/>
+        <net name="insfet/nextInstr_1[9]"/>
+        <net name="insfet/nextInstr_1[8]"/>
+        <net name="insfet/nextInstr_1[7]"/>
+        <net name="insfet/nextInstr_1[6]"/>
+        <net name="insfet/nextInstr_1[5]"/>
+        <net name="insfet/nextInstr_1[4]"/>
+        <net name="insfet/nextInstr_1[3]"/>
+        <net name="insfet/nextInstr_1[2]"/>
+        <net name="insfet/nextInstr_1[1]"/>
+        <net name="insfet/nextInstr_1[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -461,7 +573,7 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="neq1&apos;b1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
@@ -469,7 +581,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="neq1&apos;b1"/>
       </probeOptions>
       <nets>
         <net name="mpgDebouncedButton"/>

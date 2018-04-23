@@ -27,7 +27,7 @@ signal aluControl : STD_LOGIC_VECTOR(3 downto 0);
 
 attribute mark_debug : string;
 
-attribute mark_debug of aluIn2 : signal is "true";
+
 attribute mark_debug of zero : signal is "true";
 
 begin
@@ -78,6 +78,7 @@ begin
     end process;
     
     aluRes <= result;
+    branchAddress <= branchAddressS;
     
     branchAddressS <= nextInstruction + extImm;
     

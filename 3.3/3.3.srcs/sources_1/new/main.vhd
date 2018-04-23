@@ -75,10 +75,7 @@ signal sa : STD_LOGIC;
 attribute mark_debug of rd1 : signal is "true";
 attribute mark_debug of rd2 : signal is "true";
 
-attribute mark_debug of funct : signal is "true";
-attribute mark_debug of aluOp : signal is "true";
-attribute mark_debug of sa : signal is "true";
-attribute mark_debug of branch : signal is "true";
+
  
  
 Begin
@@ -194,8 +191,8 @@ Begin
             
             
             with sw(8 downto 5) select
-                display <= currentInstruction when "000",
-                    nextInstruction when "001",
+                display <= currentInstruction when "0000",
+                    nextInstruction when "0001",
                     rd1 when "0010",
                     rd2 when "0011",
 					extImm when "0100",
@@ -204,6 +201,7 @@ Begin
 					registerWD when "0111",
 					"0000000000000" & currentInstruction(12 downto 10) when "1000",
 					"0000000000000" & currentInstruction(9 downto 7) when "1001",
+					branchAddress when "1010",
 					aluRes when others;
             
 			led(9 downto 8) <= aluOp;			

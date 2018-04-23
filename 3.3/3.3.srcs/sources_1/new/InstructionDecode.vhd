@@ -36,9 +36,9 @@ begin
     
     process(instruction, extOp)
     begin
-        if(instruction(6) = '0')
+        if(extOp = '1')
         then
-            if(extOp = '1')
+            if(instruction(6) = '1')
             then
                 ext_Imm <= b"111_111_111" & instruction(6 downto 0);
             else

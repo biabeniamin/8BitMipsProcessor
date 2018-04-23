@@ -22,7 +22,7 @@ end InstructFetch;
 
 architecture Behavioral of InstructFetch is
 
-type romType is array(0 to 15) of std_logic_vector(15 downto 0);
+type romType is array(0 to 19) of std_logic_vector(15 downto 0);
 
 --shift left log function=000
 --add function=001
@@ -54,6 +54,10 @@ B"000_001_000_001_1_001",	--srl $1, $1, $0
 B"000_001_000_001_1_001",	--srl $1, $1, $0 
 B"010_000_001_0000000",	--sw $1, $0, 0
 B"001_000_011_0000000",	--lw $3,$0, 0
+B"101_000_001_0001001",	--addi $1,$0, 9
+B"011_011_001_0000001",	--beq $1,$3, 1
+B"000_001_000_001_1_001",	--srl $1, $1, $0
+B"000_001_000_001_1_001",	--srl $1, $1, $0 
 B"100_0000000000000"	--jmp 0
 
 

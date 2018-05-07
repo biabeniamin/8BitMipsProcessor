@@ -67,6 +67,7 @@ signal branchAddress : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal memData : STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 --instruction deocde
+signal writeRegisterAddress : STD_LOGIC_VECTOR(2 DOWNTO 0);
 signal rd1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal rd2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal extImm : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -75,30 +76,86 @@ signal sa : STD_LOGIC;
 attribute mark_debug of rd1 : signal is "true";
 attribute mark_debug of rd2 : signal is "true";
 
-
+--if/id register
+signal ifId : STD_LOGIC_VECTOR(31 downto 0);
+signal idEx : STD_LOGIC_VECTOR(77 downto 0);
+signal exMem : STD_LOGIC_VECTOR(77 downto 0);
+signal memWb : STD_LOGIC_VECTOR(77 downto 0);
  
  
 Begin
     
-    with memToReg select
-        registerWD <= memData when '1',
-            aluRes when '0';
+    process(clk, mpgDebouncedButton)
+	begin
+		if(rising_edge(clk))
+		then
+		  if(mpgDebouncedButton = '1')
+          then
+            ifId(15 downto 0)  <= currentInstruction;
+            ifId(31 downto 16) <= nextInstruction;
             
-    jumpAddress <=  nextInstruction(15 downto 13 ) & currentInstruction(12 downto 0);
+            idEx(15 downto 0) <= rd1;
+            idEx(31 downto 16) <= rd2;
+            idEx(46 downto 32) <= extImm;
+            idEx(49 downto 35) <= funct;
+            idEx(50) <= sa;
+            
+            idEx(51) <= regDst;
+            idEx(52) <= extOp;
+            idEx(53) <= aluSrc;
+            idEx(54) <= branch;
+            idEx(55) <= jump;
+            idEx(57 downto 56) <= aluOp;
+            idEx(58) <= memWrite;
+            idEx(59) <= memToReg;
+            idEx(60) <= regWrite;
+            idEx(76 downto 61) <= ifId(31 downto 16);
+            idEx(92 downto 76) <= ifId(15 downto 0);
+            
+            exMem(2 downto 0) <= writeRegisterAddress;
+            exMem(18 downto 3) <= rd2;
+            exMem(34 downto 19) <= aluRes;
+            exMem(35) <= zero;
+            exMem(51 downto 36) <= branchAddress;
+            exMem(52) <= idEx(54);
+            exMem(53) <= idEx(58);
+            exMem(54) <= idEx(60);
+            exMem(55) <= idEx(59);
+            
+            memWb(2 downto 0) <= exMem(2 downto 0);
+            memWb(17 downto 2) <= exMem(34 downto 19);
+            memWb(33 downto 18) <= memData;
+            memWb(34) <= exMem(55);
+            memWb(34) <= exMem(54);
+            
+          end if;
+		end if;
+    end process;
     
-    pCSrcControl <= branch and zero;
+    with idEx(51) select 
+        writeRegisterAddress <= idEx(85 downto 83) when '0',
+            idEx(82 downto 80) when others;
+
+    
+    with memWb(34) select
+        registerWD <= memWb(33 downto 18) when '1',
+             memWb(17 downto 2) when '0';
+            
+    jumpAddress <=  ifId(46 downto 29 ) & ifId(12 downto 0);
+    
+    pCSrcControl <= exMem(52) and exMem(35);
     
     memory : entity work.Memory
         Port map( clk => clk,
-            ra => aluRes,
-            wd => rd2,
+            ra => exMem(34 downto 19),
+            wd => exMem(18 downto 3),
             wen => mpgDebouncedButton,
-            memWrite => memWrite,
+            memWrite => exMem(53),
             rd => memData
         );
     
     uc : entity work.MainControl
-    port map(instruction => currentInstruction,
+    port map(instruction => ifId(15 downto 0),
         regDst => regDst,
         extOp => extOp,
         aluSrc => aluSrc,
@@ -113,9 +170,9 @@ Begin
     ic : entity work.InstructionDecode
     port map(clk => clk,
         wen => mpgDebouncedButton,
-        regWrite =>regWrite,
-        instruction =>currentInstruction,
-        regDst => regDst,
+        writeAddress =>memWb(2 downto 0),
+        instruction =>ifId(15 downto 0),
+        regWrite => memWb(34),
         extOp => extOp,
         wd => registerWD,
         rd1 => rd1,
@@ -129,7 +186,7 @@ Begin
     insfet : entity work.InstructFetch
     port map ( clk =>clk,
         clkEnable => mpgDebouncedButton,
-        branchAddress => branchAddress,
+        branchAddress => exMem(51 downto 36),
         jumpAddress => jumpAddress,
         jumpControl => jump,
         pCSrcControl => pCSrcControl,
@@ -140,17 +197,17 @@ Begin
 		
 	alu : entity work.alu
 	Port map(clk =>clk,
-        nextInstruction => nextInstruction,
-        rd1 => rd1,
-		rd2 => rd2,
-        aluSrc => aluSrc,
-        extImm => extImm,
-        funct => funct,
-        sa => sa,
-        aluOp => aluOp,
+        nextInstruction => idEx(76 downto 61),
+        rd1 => idEx(15 downto 0),
+		rd2 => idEx(31 downto 16),
+        aluSrc => idEx(53),
+        extImm => idEx(46 downto 32),
+        funct => idEx(49 downto 35),
+        sa => idEx(50),
+        aluOp => idEx(57 downto 56),
         aluRes => aluRes,
         zero => zero,
-        branchAddress => branchAddress);
+        branchAddress => exMem(51 downto 36));
         
         
         mpgInstance : entity work.MPG
